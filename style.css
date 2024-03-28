@@ -1,0 +1,142 @@
+/* Importation de la police de caractères depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins comme police par défaut */
+}
+
+/* Styles généraux pour le corps de la page */
+body {
+    background-color: rgb(65, 34, 77); /* Couleur d'arrière-plan */
+    color: white; /* Couleur du texte */
+}
+
+/* Styles pour l'en-tête de la page */
+.header {
+    position: fixed; /* Position fixe pour rester en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%; /* Espacement interne */
+    background-color: rgb(65, 34, 77); /* Couleur d'arrière-plan */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* Empilement en avant */
+}
+
+/* Styles pour le logo */
+.logo {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Styles pour les liens de navigation */
+.navbar a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .3px; /* Transition fluide lors du survol */
+}
+
+.navbar a:hover {
+    color: rgb(195,204,173); /* Changement de couleur au survol */
+}
+
+/* Styles pour la section "À propos" */
+.moi {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.apropos {
+    max-width: 600px; /* Largeur maximale de la section */
+}
+
+.apropos h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.apropos h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(195,204,173); /* Couleur spécifique */
+}
+
+.apropos p {
+    font-size: 20px;
+    margin: 20px 0 40px;
+}
+
+/* Styles pour la boîte du bouton */
+.apropos .btn-box {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 60px;
+}
+
+/* Styles pour le bouton de téléchargement */
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(195,204,173);
+    border: 2px solid rgb(195,204,173);
+    border-radius: 8px;
+    font-size: 19px;
+    color: rgb(65, 34, 77);
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: .5s; /* Transition fluide au survol */
+}
+
+/* Pseudo-élément pour l'effet de dégradé au survol */
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(65, 34, 77);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: rgb(195,204,173); /* Changement de couleur au survol */
+}
+
+.btn-box a:hover::before {
+    width: 100%; /* Extension complète au survol */
+}
+
+/* Styles pour l'image */
+.photo {
+    border-radius: 50%;
+    border: 5px solid rgb(195,204,173);
+    position: fixed; /* Position fixe pour placer l'image par rapport à la fenêtre du navigateur */
+    top: 50%; /* Positionnement vertical au milieu de l'écran */
+    right: 0; /* Collé au bord droit de l'écran */
+    transform: translateY(-50%); /* Décalage de moitié de la hauteur de l'image vers le haut pour la centrer verticalement */
+    margin-right: 250px; /* Marge à droite pour l'éloigner du bord */
+}
