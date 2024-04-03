@@ -156,7 +156,7 @@ h1 {
 .S101{
     
 
-    background-image: url(Cartomagic.png);
+    background-image: url(Cartomagic_after.png );
     background-size: 100%;
     cursor:pointer;
 
@@ -173,8 +173,7 @@ h1 {
 }
 
 .S101:hover{
-    background-image: url(Cartomagic_after.png );
-    transition: 2s;
+    
 }
 
 .projets{
