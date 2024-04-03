@@ -8,6 +8,10 @@
     font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins comme police par défaut */
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Styles généraux pour le corps de la page */
 body {
     background-color: rgb(65, 34, 77); /* Couleur d'arrière-plan */
@@ -62,7 +66,7 @@ body {
     max-width: 600px; /* Largeur maximale de la section */
 }
 
-.apropos h1 {
+h1 {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
@@ -133,10 +137,46 @@ body {
 /* Styles pour l'image */
 .photo {
     border-radius: 50%;
-    border: 5px solid rgb(195,204,173);
-    position: fixed; /* Position fixe pour placer l'image par rapport à la fenêtre du navigateur */
-    top: 50%; /* Positionnement vertical au milieu de l'écran */
-    right: 0; /* Collé au bord droit de l'écran */
+    border: 5px solid rgb(132,95,230);
+    position: relative;
+    top: 25%; /* Positionnement vertical au milieu de l'écran */
+    left: 30%; /* Collé au bord droit de l'écran */
     transform: translateY(-50%); /* Décalage de moitié de la hauteur de l'image vers le haut pour la centrer verticalement */
     margin-right: 250px; /* Marge à droite pour l'éloigner du bord */
+}
+
+
+.titreport{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.S101{
+    
+
+    background-image: url(Cartomagic.png);
+    background-size: 100%;
+    cursor:pointer;
+
+    display: flex;
+    justify-content:center;
+    position : relative;
+    left: 10%; /* Déplacer l'élément de 30 pixels vers la droite */
+    width: 300px;
+    height: 150px;
+    background-repeat: no-repeat;
+    border: 3px solid rgb(195,204,173);
+    border-radius: 20px;
+
+}
+
+.S101:hover{
+    background-image: url(Cartomagic_after.png );
+    transition: 1s;
+}
+
+.projets{
+    
 }
