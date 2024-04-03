@@ -153,57 +153,171 @@ h1 {
     padding: 0 10%;
 }
 
-.S101 {
-    background-image: url(Cartomagic.png);
-    background-size: 100%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
+
+.btn a{
     position: relative;
-    left: 10%; /* Déplacer l'élément de 30 pixels vers la droite */
-    width: 300px;
-    height: 150px;
-    background-repeat: no-repeat;
-    border: 3px solid rgb(195, 204, 173);
-    border-radius: 20px;
-    overflow: hidden; /* Assure que cartodesc reste caché lorsqu'il déborde */
+    display: inline-flex;
+    width: 250px;
+    height: 100px;
+    background-color: rgb(195,204,173);
+    border: 2px solid rgb(195,204,173);
+    border-radius: 8px;
+    color: rgb(65, 34, 77);
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    left: 13%;
+    margin-right: 40px; /* Ajout de marges à droite pour créer un espacement */
+    transition: .5s; /* Transition fluide au survol */
 }
 
 
-.titreCarto {
+/* Pseudo-élément pour l'effet de dégradé au survol */
+.btn a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(65, 34, 77);
+    z-index: -1;
+    transition: .5s;
+}
+.btn a:hover {
+    color: rgb(195,204,173); /* Changement de couleur au survol */
+}
+
+
+.btn a:hover::before {
+    width: 100%; /* Extension complète au survol */
+}
+
+.S101{
+    font-size: 25px;
+}
+
+.S102{
+    font-size: 30px;
+}
+
+.portpdf{
+    font-size: 25px;
+}
+
+.titre {
     height: 50vh;
     display: flex;
     align-items: center;
     padding: 0 10%;
 }
-.cartodl {
+
+.dl {
     margin: 10px;
-    margin-left: 120px; /* Ajout de cette ligne */
+    position: absolute;
+    right: 0;
+
 }
-.reglecarto {
+
+.regleCarto {
     height:100vh;
     display: block;
     align-items: left;
     padding: 0 10%;
 }
-.reglecarto h3 {
+
+.regleCarto h3 {
     font-size: 24px; /* Taille de police pour le titre des règles */
 }
 
-.reglecarto p {
-    font-size: 18px; /* Taille de police pour les paragraphes */
+.regleCarto p {
+    font-size: 20px; /* Taille de police pour les paragraphes */
     line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    font-weight: 800;
 }
 
-.reglecarto ul,
-.reglecarto ol {
+.regleCarto ul,
+.regleCarto ol {
     margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
 }
 
-.reglecarto li {
+.regleCarto li {
     margin-left : 10px;
     margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
 }
 
-/* Vous pouvez ajouter d'autres styles selon vos besoins */
+.regleSpellwar {
+    height:100vh;
+    display: block;
+    align-items: left;
+    padding: 0 10%;
+}
 
+.regleSpellwar h3 {
+    font-size: 24px; /* Taille de police pour le titre des règles */
+}
+
+.regleSpellwar p {
+    font-size: 20px; /* Taille de police pour les paragraphes */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+.regleSpellwar ul,
+.regleSpellwar ol {
+    margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
+}
+
+.regleSpellwar li {
+    margin-left : 10px;
+    margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
+}
+
+
+
+.btn-port a {
+    position: relative;
+    display: inline-flex;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(195,204,173);
+    border: 2px solid rgb(195,204,173);
+    border-radius: 8px;
+    font-size: 19px;
+    color: rgb(65, 34, 77);
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: .5s; /* Transition fluide au survol */
+    left: 1500px;
+}
+
+/* Pseudo-élément pour l'effet de dégradé au survol */
+.btn-port a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(65, 34, 77);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-port a:hover {
+    color: rgb(195,204,173); /* Changement de couleur au survol */
+}
+
+.btn-port a:hover::before {
+    width: 100%; /* Extension complète au survol */
+}
