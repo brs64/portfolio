@@ -21,7 +21,7 @@ body {
 /* Styles pour l'en-tête de la page */
 .header {
     position: fixed; /* Position fixe pour rester en haut de la page */
-    top: 0;
+    top: 30px;
     left: 0;
     width: 100%;
     padding: 20px 10%; /* Espacement interne */
