@@ -21,7 +21,7 @@ body {
 /* Styles pour l'en-tête de la page */
 .header {
     position: fixed; /* Position fixe pour rester en haut de la page */
-    top: 30px;
+    top: 0;
     left: 0;
     width: 100%;
     padding: 20px 10%; /* Espacement interne */
@@ -170,12 +170,4 @@ h1 {
     border: 3px solid rgb(195,204,173);
     border-radius: 20px;
 
-}
-
-.S101:hover{
-    
-}
-
-.projets{
-    
 }
