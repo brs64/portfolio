@@ -154,6 +154,7 @@ h1 {
 }
 
 .S101 {
+    background-image: url(Cartomagic.png);
     background-size: 100%;
     cursor: pointer;
     display: flex;
