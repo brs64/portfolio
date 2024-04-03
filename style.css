@@ -56,7 +56,7 @@ body {
 
 /* Styles pour la section "À propos" */
 .moi {
-    height: 100vh;
+    height: 120vh;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -153,21 +153,57 @@ h1 {
     padding: 0 10%;
 }
 
-.S101{
-    
-
-    background-image: url(Cartomagic_after.png );
+.S101 {
+    background-image: url(Cartomagic_after.png);
     background-size: 100%;
-    cursor:pointer;
-
+    cursor: pointer;
     display: flex;
-    justify-content:center;
-    position : relative;
+    justify-content: center;
+    position: relative;
     left: 10%; /* Déplacer l'élément de 30 pixels vers la droite */
     width: 300px;
     height: 150px;
     background-repeat: no-repeat;
-    border: 3px solid rgb(195,204,173);
+    border: 3px solid rgb(195, 204, 173);
     border-radius: 20px;
-
+    overflow: hidden; /* Assure que cartodesc reste caché lorsqu'il déborde */
 }
+
+
+.titreCarto {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.cartodl {
+    margin: 10px;
+    margin-left: 120px; /* Ajout de cette ligne */
+}
+.reglecarto {
+    height:100vh;
+    display: block;
+    align-items: left;
+    padding: 0 10%;
+}
+.reglecarto h3 {
+    font-size: 24px; /* Taille de police pour le titre des règles */
+}
+
+.reglecarto p {
+    font-size: 18px; /* Taille de police pour les paragraphes */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+.reglecarto ul,
+.reglecarto ol {
+    margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
+}
+
+.reglecarto li {
+    margin-left : 10px;
+    margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
+}
+
+/* Vous pouvez ajouter d'autres styles selon vos besoins */
+
