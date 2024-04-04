@@ -159,6 +159,7 @@ h1 {
     display: inline-flex;
     width: 250px;
     height: 100px;
+    font-size: 25px;
     background-color: rgb(195,204,173);
     border: 2px solid rgb(195,204,173);
     border-radius: 8px;
@@ -198,17 +199,6 @@ h1 {
     width: 100%; /* Extension complète au survol */
 }
 
-.S101{
-    font-size: 25px;
-}
-
-.S102{
-    font-size: 30px;
-}
-
-.portpdf{
-    font-size: 25px;
-}
 
 .titre {
     height: 50vh;
