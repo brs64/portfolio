@@ -232,38 +232,38 @@ h1 {
     font-weight: 800;
 }
 
-.description ul,
-.description ol {
+.regleCarto ul,
+.regleCarto ol {
     margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
 }
 
-.description li {
+.regleCarto li {
     margin-left : 10px;
     margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
 }
 
-.description {
+.regleSpellwar {
     height:100vh;
     display: block;
     align-items: left;
     padding: 0 10%;
 }
 
-.description h3 {
+.regleSpellwar h3 {
     font-size: 24px; /* Taille de police pour le titre des règles */
 }
 
-.description p {
+.regleSpellwar p {
     font-size: 20px; /* Taille de police pour les paragraphes */
     line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
 }
 
-.description ul,
-.description ol {
+.regleSpellwar ul,
+.regleSpellwar ol {
     margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
 }
 
-.description li {
+.regleSpellwar li {
     margin-left : 10px;
     margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
 }
