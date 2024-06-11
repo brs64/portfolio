@@ -268,7 +268,28 @@ h1 {
     margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
 }
 
+.regleCarto p {
+    font-size: 20px; /* Taille de police pour les paragraphes */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    font-weight: 800;
+}
 
+.description ul,
+.description ol {
+    margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
+}
+
+.description li {
+    margin-left : 10px;
+    margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
+}
+
+.description {
+    height:100vh;
+    display: block;
+    align-items: left;
+    padding: 0 10%;
+}
 
 .btn-port a {
     position: relative;
