@@ -285,7 +285,7 @@ h1 {
 }
 
 .description {
-    height:100vh;
+    height:50vh;
     display: block;
     align-items: left;
     padding: 0 10%;
