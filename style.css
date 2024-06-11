@@ -56,10 +56,11 @@ body {
 
 /* Styles pour la section "À propos" */
 .moi {
-    height: 120vh;
+    height: 75vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding: 0 10%;
+    margin-bottom: 20vh; /* Ajouter une marge en bas */
 }
 
 .apropos {
@@ -147,7 +148,7 @@ h1 {
 
 
 .titreport{
-    height: 20vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -201,9 +202,9 @@ h1 {
 
 
 .titre {
-    height: 50vh;
+    height: 20vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding: 0 10%;
 }
 
@@ -231,38 +232,38 @@ h1 {
     font-weight: 800;
 }
 
-.regleCarto ul,
-.regleCarto ol {
+.description ul,
+.description ol {
     margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
 }
 
-.regleCarto li {
+.description li {
     margin-left : 10px;
     margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
 }
 
-.regleSpellwar {
+.description {
     height:100vh;
     display: block;
     align-items: left;
     padding: 0 10%;
 }
 
-.regleSpellwar h3 {
+.description h3 {
     font-size: 24px; /* Taille de police pour le titre des règles */
 }
 
-.regleSpellwar p {
+.description p {
     font-size: 20px; /* Taille de police pour les paragraphes */
     line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
 }
 
-.regleSpellwar ul,
-.regleSpellwar ol {
+.description ul,
+.description ol {
     margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
 }
 
-.regleSpellwar li {
+.description li {
     margin-left : 10px;
     margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
 }
@@ -286,9 +287,10 @@ h1 {
     z-index: 1;
     overflow: hidden;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     transition: .5s; /* Transition fluide au survol */
-    left: 50%;
+    left: 10%;
+    margin-bottom: 10vh; /* Ajouter une marge en bas */
 }
 
 /* Pseudo-élément pour l'effet de dégradé au survol */

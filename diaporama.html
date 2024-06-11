@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="fichiers/batman.jpg">
+    <title>Lecteur de diaporama</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Arthur Baros</a>
+    </header>
+    <section class="titre">
+        <h1>Lecteur de diaporama</h1>
+    </section>
+    <div class="btn-port">
+        <a href="https://github.com/brs64/S2.01" class="dl">Allez voir !</a>
+    </div>
+    <section class="description">
+        <h3>Description du projet</h3><br>
+        <p>Dans le cadre d'un de nos projets, nous devions, en équipe de trois,</p>
+        <p>programmer un lecteur de diaporama à l'aide de l'IDE QT et des différentes bibliothèques que propose ce dernier.</p>
+        <p>Il s’agit donc d’un lecteur de diaporama, c’est-à-dire une application permettant d’afficher des images sous la forme d’un
+            diaporama. Un diaporama est un regroupement d’images possédant un titre. Par exemple : « mes vacances 2021 ».</p> <br>
+        <p>Le lecteur affiche les images du diaporama en cours. Chaque image est affichée accompagnée de son intitulé / titre,
+            de la catégorie à laquelle elle appartient, et de son rang au sein du diaporama.</p> <br>
+        <p>Le lecteur de diaporama dispose de 2 modes de fonctionnement :</p>
+        <ul>
+            <li>mode Manuel : L’image courante (et les informations qui l’accompagnent) restent affichées tant que
+                l’utilisateur ne fait rien. Deux boutons (flèches « suivant » et « précédent ») permettent de passer
+                manuellement à l’image suivante ou précédente. L’affichage ‘boucle’ : une fois sur la dernière image, le
+                bouton « suivant » affiche la première image. De même, une fois sur la première image, le bouton «
+                précédent » affiche la dernière image. </li>
+            <li>mode Auto : Les images défilent automatiquement, à raison de 1 image toutes les 2 secondes. Le défilement
+                automatique va uniquement vers l’avant, et démarre toujours à partir de la première image. L’affichage
+                automatique ‘boucle’ : après la dernière image, l’application affiche à nouveau la première image. </li>
+        </ul> <br>
+        <p>Où sont les images ?</p> <br>
+        <ul>
+            <li>Les informations chargées dans le programme au sujet de chaque image sont les suivantes : intitulé / titre, catégorie,
+                son rang dans le diaporama, et le chemin d’accès au fichier où se trouve le fichier contenant l’image.</li>
+            <li>Quant aux images, elles sont stockées localement, dans un dossier, sur la machine où s’exécute l’application. </li>
+        </ul>
+    </section>
+</body>
+
+</html>
