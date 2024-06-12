@@ -376,7 +376,7 @@ h1 {
     background: rgb(195,204,173);
   }
   
-  .reseaux .social-button.linkedin:hover, .reseaux .social-button.linkedin:focus {
+  .reseaux .social-button.linkedin:hover{
     color: rgb(195,204,173);
     background: rgb(65, 34, 77);
     border-color: rgb(195,204,173);
@@ -386,7 +386,7 @@ h1 {
     background: rgb(195,204,173);
   }
   
-  .reseaux .social-button.instagram:hover, .reseaux .social-button.instagram:focus {
+  .reseaux .social-button.instagram:hover{
     color: rgb(195,204,173);
     background: rgb(65, 34, 77);
     border-color: rgb(195,204,173);
@@ -396,7 +396,7 @@ h1 {
     background: rgb(195,204,173);
   }
   
-  .reseaux .social-button.mail:hover, .reseaux .social-button.mail:focus {
+  .reseaux .social-button.mail:hover{
     color: rgb(195,204,173);
     background: rgb(65, 34, 77);
     border-color: rgb(195,204,173);
@@ -405,7 +405,7 @@ h1 {
     background: rgb(195,204,173);
   }
   
-  .reseaux .social-button.phone:hover, .reseaux .social-button.phone:focus {
+  .reseaux .social-button.phone:hover{
     color: rgb(195,204,173);
     background: rgb(65, 34, 77);
     border-color: rgb(195,204,173);
