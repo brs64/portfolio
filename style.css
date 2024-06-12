@@ -451,6 +451,9 @@ footer h3 {
     .navbar {
         padding: 10px 5%;
         font-size: 20px;
+        display: flex;
+        flex-direction: column; /* Empiler les éléments verticalement */
+        align-items: center; /* Centrer horizontalement */
     }
 
     .logo {
