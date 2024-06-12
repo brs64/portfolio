@@ -461,6 +461,7 @@ footer h3 {
     }
 
     .navbar a {
+        display: block; /* Empiler les liens verticalement */
         font-size: 14px;
         margin-left: 5px;
     }
