@@ -336,9 +336,20 @@ h1 {
 }
 
 
-.reseaux {
+
+footer{
+    margin-bottom: 5vh;
     text-align: center;
-  }
+}
+
+footer h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(195,204,173); /* Couleur spécifique */
+    padding: 0 10%;
+    text-decoration:dotted overline rgb(195,204,173);
+    color : rgb(217, 217, 217);
+}
   
   .reseaux .social-button {
     display: inline-block;
@@ -410,3 +421,112 @@ h1 {
     background: rgb(65, 34, 77);
     border-color: rgb(195,204,173);
   }
+
+
+
+
+
+/* Styles pour les écrans de taille moyenne (tablettes) */
+@media (min-width: 769px) and (max-width: 1024px) {
+.header {
+    padding: 15px 5%;
+}
+.logo {
+    font-size: 22px;
+}
+.navbar a {
+    font-size: 15px;
+    margin-left: 20px;
+}
+.moi {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    margin-bottom: 15vh;
+}
+.apropos {
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+.photo {
+    width: 60%;
+    height: auto;
+    margin: 20px 0;
+    position: static;
+    transform: none;
+    margin-right: 0;
+}
+.btn-box {
+    width: 100%;
+    justify-content: center;
+}
+.btn-box a {
+    width: 70%;
+}
+.portfolio .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .btn a {
+        width: 70%;
+        margin: 10px 0;
+    }
+    .description {
+        padding: 0 5%;
+    }
+}
+
+
+/* Styles pour les téléphones */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 5%;
+    }
+    .logo {
+        font-size: 18px;
+    }
+    .navbar a {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .moi {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        margin-bottom: 8vh;
+    }
+    .apropos {
+        max-width: 95%;
+        margin-bottom: 15px;
+    }
+    .photo {
+        width: 90%;
+        height: auto;
+        margin: 10px 0;
+        position: static;
+        transform: none;
+        margin-right: 0;
+    }
+    .btn-box {
+        width: 100%;
+        justify-content: center;
+    }
+    .btn-box a {
+        width: 90%;
+    }
+    .portfolio .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn a {
+        width: 90%;
+        margin: 5px 0;
+    }
+    .description {
+        padding: 0 5%;
+    }
+}
