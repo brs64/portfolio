@@ -428,56 +428,60 @@ footer h3 {
 
 /* Styles pour les écrans de taille moyenne (tablettes) */
 @media (min-width: 769px) and (max-width: 1024px) {
-.header {
-    padding: 15px 5%;
-}
-.logo {
-    font-size: 22px;
-}
-.navbar a {
-    font-size: 15px;
-    margin-left: 20px;
-}
-.moi {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: auto;
-    margin-bottom: 15vh;
-}
-.apropos {
-    max-width: 80%;
-    margin-bottom: 20px;
-}
-.photo {
-    width: 60%;
-    height: auto;
-    margin: 20px 0;
-    position: static;
-    transform: none;
-    margin-right: 0;
-}
-.btn-box {
-    width: 100%;
-    justify-content: center;
-}
-.btn-box a {
-    width: 70%;
-}
-.portfolio .btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .header {
+        padding: 15px 5%;
+    }
+    .logo {
+        font-size: 24px;
+    }
+    .navbar a {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .moi {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        margin-bottom: 15vh;
+        margin-top: 15vh;
+    }
+    .apropos {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    .photo {
+        width: 60%;
+        height: auto;
+        margin: 20px 0;
+        position: static;
+        transform: none;
+        margin-right: 0;
+    }
+    .btn-box {
+        width: 100%;
+        justify-content: center;
+    }
+    .btn-box a {
+        width: 70%;
+    }
+    .portfolio .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .btn a {
         width: 70%;
         margin: 10px 0;
     }
     .description {
         padding: 0 5%;
+        text-align: center; /* Centrer le texte */
+    }
+    .description h3, .description p {
+        font-size: 22px; /* Augmenter la taille de la police */
     }
 }
-
 
 /* Styles pour les téléphones */
 @media (max-width: 480px) {
@@ -485,10 +489,10 @@ footer h3 {
         padding: 10px 5%;
     }
     .logo {
-        font-size: 18px;
+        font-size: 20px;
     }
     .navbar a {
-        font-size: 12px;
+        font-size: 14px;
         margin-left: 5px;
     }
     .moi {
@@ -497,6 +501,7 @@ footer h3 {
         text-align: center;
         height: auto;
         margin-bottom: 8vh;
+        margin-top: 8vh; /* Ajouter une marge en bas */
     }
     .apropos {
         max-width: 95%;
@@ -528,5 +533,9 @@ footer h3 {
     }
     .description {
         padding: 0 5%;
+        text-align: center; /* Centrer le texte */
+    }
+    .description h3, .description p {
+        font-size: 20px; /* Augmenter la taille de la police */
     }
 }
