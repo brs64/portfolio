@@ -285,7 +285,7 @@ h1 {
 }
 
 .description {
-    height:50vh;
+    height:100vh;
     display: block;
     align-items: left;
     padding: 0 10%;
@@ -334,3 +334,79 @@ h1 {
 .btn-port a:hover::before {
     width: 100%; /* Extension complète au survol */
 }
+
+
+.reseaux {
+    text-align: center;
+  }
+  
+  .reseaux .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 0.125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(65, 34, 77);
+    font-size: 1.5625rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 1.6875rem;
+    transition: all 0.5s ease;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .reseaux .social-button:hover, .reseaux .social-button:focus {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  
+  .reseaux .fa-linkedin, .fa-instagram, .fa-envelope, .fa-phone {
+    font-size: 25px;
+  }
+  
+  
+  
+  .reseaux .social-button.linkedin {
+    background: rgb(195,204,173);
+  }
+  
+  .reseaux .social-button.linkedin:hover, .reseaux .social-button.linkedin:focus {
+    color: rgb(195,204,173);
+    background: rgb(65, 34, 77);
+    border-color: rgb(195,204,173);
+  }
+  
+  .reseaux .social-button.instagram {
+    background: rgb(195,204,173);
+  }
+  
+  .reseaux .social-button.instagram:hover, .reseaux .social-button.instagram:focus {
+    color: rgb(195,204,173);
+    background: rgb(65, 34, 77);
+    border-color: rgb(195,204,173);
+  }
+
+  .reseaux .social-button.mail {
+    background: rgb(195,204,173);
+  }
+  
+  .reseaux .social-button.mail:hover, .reseaux .social-button.mail:focus {
+    color: rgb(195,204,173);
+    background: rgb(65, 34, 77);
+    border-color: rgb(195,204,173);
+  }
+  .reseaux .social-button.phone {
+    background: rgb(195,204,173);
+  }
+  
+  .reseaux .social-button.phone:hover, .reseaux .social-button.phone:focus {
+    color: rgb(195,204,173);
+    background: rgb(65, 34, 77);
+    border-color: rgb(195,204,173);
+  }
