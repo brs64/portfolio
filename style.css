@@ -451,8 +451,6 @@ footer h3 {
     .navbar {
         padding: 10px 5%;
         font-size: 20px;
-        display: flex;
-        flex-direction: column; /* Empiler les éléments verticalement */
         align-items: center; /* Centrer horizontalement */
     }
 
@@ -461,7 +459,8 @@ footer h3 {
     }
 
     .navbar a {
-        display: block; /* Empiler les liens verticalement */
+        display: flex; /* Empiler les liens verticalement */
+        flex-direction: column;
         font-size: 14px;
         margin-left: 5px;
     }
