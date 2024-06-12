@@ -480,6 +480,11 @@ footer h3 {
         margin-bottom: 15px;
     }
 
+    .apropos .btn-box {
+        display: flex;
+        justify-content: center;
+        height: 60px;
+    }
     .photo {
         width: 90%;
         height: auto;
@@ -490,7 +495,7 @@ footer h3 {
     }
 
     .btn-box a {
-        width: 100%; /* Utiliser la largeur maximale */
+        width: 80%; /* Utiliser la largeur maximale */
         max-width: 200px; /* Réduire encore la largeur maximale du bouton */
     }
 
@@ -505,6 +510,8 @@ footer h3 {
     }
 
     .titreport {
+        margin-top: 10vh;
+        height: 8vh;
         flex-direction: column; /* Afficher le titre et le rapport en colonne */
         align-items: center; /* Centrer les éléments horizontalement */
         text-align: center; /* Centrer le texte */
