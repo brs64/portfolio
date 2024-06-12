@@ -54,6 +54,7 @@ body {
     color: rgb(195,204,173); /* Changement de couleur au survol */
 }
 
+
 /* Styles pour la section "À propos" */
 .moi {
     height: 75vh;
@@ -146,7 +147,11 @@ h1 {
     margin-right: 250px; /* Marge à droite pour l'éloigner du bord */
 }
 
-
+.portfolio {
+    padding: 0 10%;
+    margin-bottom: 10vh; /* Ajouter une marge en bas */
+    justify-content: center;
+}
 .titreport{
     height: 30vh;
     display: flex;
@@ -485,8 +490,9 @@ footer h3 {
 
 /* Styles pour les téléphones */
 @media (max-width: 480px) {
-    .header {
+    .navbar {
         padding: 10px 5%;
+        font-size: 30px ;
     }
     .logo {
         font-size: 20px;
@@ -501,7 +507,11 @@ footer h3 {
         text-align: center;
         height: auto;
         margin-bottom: 8vh;
-        margin-top: 8vh; /* Ajouter une marge en bas */
+        margin-top: 20vh; /* Ajouter une marge en bas */
+    }
+
+    h1{
+        font-size: 40px;
     }
     .apropos {
         max-width: 95%;
@@ -522,15 +532,23 @@ footer h3 {
     .btn-box a {
         width: 90%;
     }
-    .portfolio .btn {
+
+    .portfolio{
+        justify-content: center;
+    }
+    .btn {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: auto;
+
     }
-    .btn a {
-        width: 90%;
+
+    .portfolio .btn a{
+        width: 60%;
         margin: 5px 0;
     }
+
     .description {
         padding: 0 5%;
         text-align: center; /* Centrer le texte */
