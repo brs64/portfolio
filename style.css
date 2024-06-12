@@ -1,14 +1,19 @@
 /* Importation de la police de caractères depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Réinitialisation des styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins comme police par défaut */
 }
 
-html{
+/* Utilisation de la police Poppins comme police par défaut */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -47,13 +52,12 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 30px;
-    transition: .3px; /* Transition fluide lors du survol */
+    transition: .3s; /* Transition fluide lors du survol */
 }
 
 .navbar a:hover {
     color: rgb(195,204,173); /* Changement de couleur au survol */
 }
-
 
 /* Styles pour la section "À propos" */
 .moi {
@@ -152,15 +156,15 @@ h1 {
     margin-bottom: 10vh; /* Ajouter une marge en bas */
     justify-content: center;
 }
-.titreport{
+
+.titreport {
     height: 30vh;
     display: flex;
     align-items: center;
     padding: 0 10%;
 }
 
-
-.btn a{
+.btn a {
     position: relative;
     display: inline-flex;
     width: 250px;
@@ -183,9 +187,8 @@ h1 {
     transition: .5s; /* Transition fluide au survol */
 }
 
-
 /* Pseudo-élément pour l'effet de dégradé au survol */
-.btn a::before{
+.btn a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -196,15 +199,14 @@ h1 {
     z-index: -1;
     transition: .5s;
 }
+
 .btn a:hover {
     color: rgb(195,204,173); /* Changement de couleur au survol */
 }
 
-
 .btn a:hover::before {
     width: 100%; /* Extension complète au survol */
 }
-
 
 .titre {
     height: 20vh;
@@ -217,83 +219,32 @@ h1 {
     margin: 10px;
     position: absolute;
     right: 0;
-
 }
 
-.regleCarto {
+.regleCarto, .regleSpellwar, .description {
     height:100vh;
     display: block;
     align-items: left;
     padding: 0 10%;
 }
 
-.regleCarto h3 {
+.regleCarto h3, .regleSpellwar h3, .description h3 {
     font-size: 24px; /* Taille de police pour le titre des règles */
 }
 
-.regleCarto p {
+.regleCarto p, .regleSpellwar p, .description p {
     font-size: 20px; /* Taille de police pour les paragraphes */
     line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
     font-weight: 800;
 }
 
-.regleCarto ul,
-.regleCarto ol {
+.regleCarto ul, .regleCarto ol, .regleSpellwar ul, .regleSpellwar ol, .description ul, .description ol {
     margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
 }
 
-.regleCarto li {
+.regleCarto li, .regleSpellwar li, .description li {
     margin-left : 10px;
     margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
-}
-
-.regleSpellwar {
-    height:100vh;
-    display: block;
-    align-items: left;
-    padding: 0 10%;
-}
-
-.regleSpellwar h3 {
-    font-size: 24px; /* Taille de police pour le titre des règles */
-}
-
-.regleSpellwar p {
-    font-size: 20px; /* Taille de police pour les paragraphes */
-    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
-}
-
-.regleSpellwar ul,
-.regleSpellwar ol {
-    margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
-}
-
-.regleSpellwar li {
-    margin-left : 10px;
-    margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
-}
-
-.regleCarto p {
-    font-size: 20px; /* Taille de police pour les paragraphes */
-    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
-    font-weight: 800;
-}
-
-.description ul,
-.description ol {
-    margin-left: 20px; /* Marge à gauche pour les listes à puces et numérotées */
-}
-
-.description li {
-    margin-left : 10px;
-    margin-bottom: 10px; /* Marge en bas pour chaque élément de liste */
-}
-
-.description {
-    height:100vh;
-    display: block;
-    align-items: left;
-    padding: 0 10%;
 }
 
 .btn-port a {
@@ -340,9 +291,7 @@ h1 {
     width: 100%; /* Extension complète au survol */
 }
 
-
-
-footer{
+footer {
     margin-bottom: 5vh;
     text-align: center;
 }
@@ -352,11 +301,11 @@ footer h3 {
     font-weight: 700;
     color: rgb(195,204,173); /* Couleur spécifique */
     padding: 0 10%;
-    text-decoration:dotted overline rgb(195,204,173);
-    color : rgb(217, 217, 217);
+    text-decoration: dotted overline rgb(195,204,173);
+    color: rgb(217, 217, 217);
 }
-  
-  .reseaux .social-button {
+
+.reseaux .social-button {
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -374,59 +323,57 @@ footer h3 {
     transition: all 0.5s ease;
     margin-right: 0.25rem;
     margin-bottom: 0.25rem;
-  }
-  
-  .reseaux .social-button:hover, .reseaux .social-button:focus {
+}
+
+.reseaux .social-button:hover, .reseaux .social-button:focus {
     -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  
-  .reseaux .fa-linkedin, .fa-instagram, .fa-envelope, .fa-phone {
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.reseaux .fa-linkedin, .fa-instagram, .fa-envelope, .fa-phone {
     font-size: 25px;
-  }
-  
-  
-  
-  .reseaux .social-button.linkedin {
-    background: rgb(195,204,173);
-  }
-  
-  .reseaux .social-button.linkedin:hover{
-    color: rgb(195,204,173);
-    background: rgb(65, 34, 77);
-    border-color: rgb(195,204,173);
-  }
-  
-  .reseaux .social-button.instagram {
-    background: rgb(195,204,173);
-  }
-  
-  .reseaux .social-button.instagram:hover{
-    color: rgb(195,204,173);
-    background: rgb(65, 34, 77);
-    border-color: rgb(195,204,173);
-  }
+}
 
-  .reseaux .social-button.mail {
+.reseaux .social-button.linkedin {
     background: rgb(195,204,173);
-  }
-  
-  .reseaux .social-button.mail:hover{
-    color: rgb(195,204,173);
-    background: rgb(65, 34, 77);
-    border-color: rgb(195,204,173);
-  }
-  .reseaux .social-button.phone {
-    background: rgb(195,204,173);
-  }
-  
-  .reseaux .social-button.phone:hover{
-    color: rgb(195,204,173);
-    background: rgb(65, 34, 77);
-    border-color: rgb(195,204,173);
-  }
+}
 
+.reseaux .social-button.linkedin:hover {
+    color: rgb(195,204,173);
+    background: rgb(65, 34, 77);
+    border-color: rgb(195,204,173);
+}
+
+.reseaux .social-button.instagram {
+    background: rgb(195,204,173);
+}
+
+.reseaux .social-button.instagram:hover {
+    color: rgb(195,204,173);
+    background: rgb(65, 34, 77);
+    border-color: rgb(195,204,173);
+}
+
+.reseaux .social-button.mail {
+    background: rgb(195,204,173);
+}
+
+.reseaux .social-button.mail:hover {
+    color: rgb(195,204,173);
+    background: rgb(65, 34, 77);
+    border-color: rgb(195,204,173);
+}
+
+.reseaux .social-button.phone {
+    background: rgb(195,204,173);
+}
+
+.reseaux .social-button.phone:hover {
+    color: rgb(195,204,173);
+    background: rgb(65, 34, 77);
+    border-color: rgb(195,204,173);
+}
 
 
 
@@ -436,13 +383,16 @@ footer h3 {
     .header {
         padding: 15px 5%;
     }
+
     .logo {
         font-size: 24px;
     }
+
     .navbar a {
         font-size: 18px;
         margin-left: 20px;
     }
+
     .moi {
         flex-direction: column;
         align-items: center;
@@ -451,10 +401,12 @@ footer h3 {
         margin-bottom: 15vh;
         margin-top: 15vh;
     }
+
     .apropos {
         max-width: 80%;
         margin-bottom: 20px;
     }
+
     .photo {
         width: 60%;
         height: auto;
@@ -463,26 +415,32 @@ footer h3 {
         transform: none;
         margin-right: 0;
     }
+
     .btn-box {
         width: 100%;
         justify-content: center;
     }
+
     .btn-box a {
         width: 70%;
     }
+
     .portfolio .btn {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .btn a {
         width: 70%;
         margin: 10px 0;
     }
+
     .description {
         padding: 0 5%;
         text-align: center; /* Centrer le texte */
     }
+
     .description h3, .description p {
         font-size: 22px; /* Augmenter la taille de la police */
     }
@@ -492,15 +450,18 @@ footer h3 {
 @media (max-width: 768px) {
     .navbar {
         padding: 10px 5%;
-        font-size: 20px ;
+        font-size: 20px;
     }
+
     .logo {
         font-size: 20px;
     }
+
     .navbar a {
         font-size: 14px;
         margin-left: 5px;
     }
+
     .moi {
         flex-direction: column;
         align-items: center;
@@ -510,13 +471,15 @@ footer h3 {
         margin-top: 20vh; /* Ajouter une marge en bas */
     }
 
-    h1{
+    h1 {
         font-size: 30px;
     }
+
     .apropos {
         max-width: 95%;
         margin-bottom: 15px;
     }
+
     .photo {
         width: 90%;
         height: auto;
@@ -525,24 +488,19 @@ footer h3 {
         transform: none;
         margin-right: 0;
     }
-    btn-box a {
+
+    .btn-box a {
         width: 100%; /* Utiliser la largeur maximale */
         max-width: 200px; /* Réduire encore la largeur maximale du bouton */
     }
 
-    .portfolio{
+    .portfolio {
         justify-content: center;
     }
-    .btn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: auto;
 
-    }
-
-    .portfolio .btn a{
-        width: 60%;
+   
+    .portfolio .btn a {
+        width: 70%;
         margin: 5px 0;
     }
 
@@ -556,6 +514,7 @@ footer h3 {
         padding: 0 5%;
         text-align: center; /* Centrer le texte */
     }
+
     .description h3, .description p {
         font-size: 20px; /* Augmenter la taille de la police */
     }
