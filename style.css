@@ -483,7 +483,8 @@ footer h3 {
     .apropos .btn-box {
         display: flex;
         justify-content: center;
-        width: auto;
+        align-items: center; /* Centrer verticalement */
+        width: 100%; /* Utiliser la largeur maximale */
         height: 60px;
     }
     .photo {
