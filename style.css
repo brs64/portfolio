@@ -489,10 +489,10 @@ footer h3 {
 }
 
 /* Styles pour les téléphones */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .navbar {
         padding: 10px 5%;
-        font-size: 30px ;
+        font-size: 20px ;
     }
     .logo {
         font-size: 20px;
@@ -511,7 +511,7 @@ footer h3 {
     }
 
     h1{
-        font-size: 40px;
+        font-size: 30px;
     }
     .apropos {
         max-width: 95%;
@@ -525,12 +525,9 @@ footer h3 {
         transform: none;
         margin-right: 0;
     }
-    .btn-box {
-        width: 100%;
-        justify-content: center;
-    }
-    .btn-box a {
-        width: 90%;
+    btn-box a {
+        width: 100%; /* Utiliser la largeur maximale */
+        max-width: 200px; /* Réduire encore la largeur maximale du bouton */
     }
 
     .portfolio{
@@ -547,6 +544,12 @@ footer h3 {
     .portfolio .btn a{
         width: 60%;
         margin: 5px 0;
+    }
+
+    .titreport {
+        flex-direction: column; /* Afficher le titre et le rapport en colonne */
+        align-items: center; /* Centrer les éléments horizontalement */
+        text-align: center; /* Centrer le texte */
     }
 
     .description {
