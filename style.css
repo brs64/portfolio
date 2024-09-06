@@ -44,7 +44,9 @@ body {
     text-decoration: none;
     font-weight: 600;
 }
-
+.navbar{
+    margin-left: auto;
+}
 /* Styles pour les liens de navigation */
 .navbar a {
     font-size: 16px;
@@ -59,6 +61,71 @@ body {
     color: rgb(195,204,173); /* Changement de couleur au survol */
 }
 
+.language-selector {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+  }
+  
+  .button {
+    background-color: rgb(195,204,173);
+    color: rgb(65, 34, 77);
+    padding: 10px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    font-size: 13px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-color: rgb(65, 34, 77);
+    border: 2px solid rgb(195,204,173);
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
+  }
+  
+  .dropdown-content a {
+    color: rgb(195,204,173);
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgb(195,204,173);
+    color: rgb(65, 34, 77);
+  }
+  
+  .dropdown-content a:focus {
+    background-color: rgb(65, 34, 77);
+    color: rgb(195,204,173);
+  }
+  
+  .dropdown-content #french:hover {
+    border-radius: 0px;
+  }
+  
+  .dropdown-content #spanish:hover {
+    border-radius: 0px 0px 13px 13px;
+  }
+  
+  .language-selector:hover button {
+    border-radius: 15px 15px 0px 0px;
+  }
+  
+  .language-selector:hover .dropdown-content {
+    display: block;
+  }
+
+  
 /* Styles pour la section "À propos" */
 .moi {
     height: 75vh;
@@ -145,10 +212,10 @@ h1 {
     border-radius: 50%;
     border: 5px solid rgb(132,95,230);
     position: relative;
-    top: 25%; /* Positionnement vertical au milieu de l'écran */
     left: 30%; /* Collé au bord droit de l'écran */
     transform: translateY(-50%); /* Décalage de moitié de la hauteur de l'image vers le haut pour la centrer verticalement */
     margin-right: 250px; /* Marge à droite pour l'éloigner du bord */
+    margin-top:auto;
 }
 
 .portfolio {
@@ -405,6 +472,7 @@ footer h3 {
     .apropos {
         max-width: 80%;
         margin-bottom: 20px;
+        margin-top: 50%;
     }
 
     .photo {
