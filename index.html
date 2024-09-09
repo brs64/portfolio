@@ -1,86 +1,122 @@
 <!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="fichiers/batman.jpg">
-        <title> Arthur Baros </title>
-        
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="fichiers/batman.jpg">
+    <title> Arthur Baros </title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
 
 
-    <body>
-        <header class="header"> 
-            <a href="#" class = logo>Arthur Baros. </a>
+<body>
+    <header class="header">
+        <a href="#" class=logo>Arthur Baros. </a>
 
-            <nav class="navbar">
-                <a href="#quisuisje">Qui suis-je ?</a>
-                <a href="#portfolio">Mes projets</a>
+        <nav class="navbar">
+            <a href="#quisuisje">Qui suis-je ?</a>
+            <a href="#portfolio">Mes projets</a>
 
-            </nav>
-            <div class="language-selector">
-                <button class="button">Français</button>
-                <div class="dropdown-content">
-                  <a id="english" href="index_en.html">English</a>
-                  <a id="spanish" href="index_es.html">Español</a>
-                </div>
-              </div>
-        </header>
-        <div style="height: 100px;"></div>
-        <section class = moi id ="quisuisje">
-            <article class = apropos  data-AOS="fade-right" data-aos-duration="2000">
-                <h1 >Qui suis-je ?</h1> 
-                <h3>Arthur Baros</h3>
-                <p>Actuellement étudiant en deuxième année de BUT informatique et afin d'approfondir mes connaissances en informatique,
-                    découvrir le monde du travail dans le milieu qui m'intéresse et explorer le champ des possibilités, je recherche actuellement un stage
-                    pour la fin de ma deuxième année d'étude.</p>
-                <div class="btn-box">
-                    <a href="fichiers/BAROS Arthur CV.pdf" download="fichiers/BAROS Arthur CV.pdf" target="_blank">Télecharger mon cv</a>
-                </div>
-            </article>
-            <img src="fichiers/Arthur.png" alt="Une photo de moi" width="500" height="500" class = photo  data-AOS="fade-left" data-aos-duration="2000">
-
-        </section>
-       
-    <section class = portfolio id = "portfolio">
-        <article class =titreport>
-        <h1 data-aos="zoom-out-right">Mes Projets</h1>
-        </article>
-        <div class="btn">
-                <a href="Cartomagic.html" class="S101" data-aos="fade-right" data-aos-duration="1000">Cartomagic</a>
-                <a href="Spellwar.html" class="S102" data-aos="fade-right" data-aos-duration="1500">Spellwar</a> 
-                <a href="diaporama.html" class="S201" data-aos="fade-right" data-aos-duration="2000">Diaporama</a> <!--Pour l'instant il n'y a que trois projets mais je compte les rajouter au fur et à mesure-->
-
-                
+        </nav>
+        <div class="language-selector">
+            <button class="button">Français</button>
+            <div class="dropdown-content">
+                <a id="english" href="index_en.html">English</a>
+                <a id="spanish" href="index_es.html">Español</a>
             </div>
         </div>
+    </header>
+    <div style="height: 100px;"></div>
+    <section class=moi id="quisuisje">
+        <article class=apropos data-AOS="fade-right" data-aos-duration="2000">
+            <h1>Qui suis-je ?</h1>
+            <h3>Arthur Baros</h3>
+            <p>Actuellement étudiant en deuxième année de BUT informatique et afin d'approfondir mes connaissances en
+                informatique,
+                découvrir le monde du travail dans le milieu qui m'intéresse et explorer le champ des possibilités, je
+                recherche actuellement un stage
+                pour la fin de ma deuxième année d'étude.</p>
+            <div class="btn-box">
+                <a href="fichiers/BAROS Arthur CV.pdf" download="fichiers/BAROS Arthur CV.pdf"
+                    target="_blank">Télecharger mon cv</a>
+            </div>
+        </article>
+        <img src="fichiers/Arthur.png" alt="Une photo de moi" width="500" height="500" class=photo data-AOS="fade-left"
+            data-aos-duration="2000">
+
     </section>
-    
+
+    <section class=portfolio id="portfolio">
+        <article class=titreport>
+            <h1 data-aos="zoom-out-right">Mes Projets</h1>
+        </article>
+
+        <div id="spellwar" class="popup" href="#">
+            <div class="popup-content">
+                <h2 class="titreProj">SPELLWAR</h2>
+
+                <img src="fichiers/Spellwar.jpg" class="imgSpe">
+                <a href="fichiers/spellwar.zip" class="download-btn" download>
+                    <i class="fa fa-download" aria-hidden="true"></i> Télécharger
+                  </a>
+                  </a>
+                  <hr class="separator">
+                <p class="descrProj">Spellwar est un jeu d’arcade au tour par tour dans lequel un joueur incarne un
+                    magicien qui affronte des créatures maléfiques. C'est un jeu prenant place dans le cmd, ce dernier a
+                    été imaginé pour nous initier au développement en C++.
+                </p>
+                <hr class="separator">
+
+                <p class="etiquette"> ⌂ C++ </p>
+                <a href="#portfolio" class="close">x</a>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="Cartomagic.html" class="S101" data-aos="fade-right" data-aos-duration="1000">Cartomagic</a>
+            <a href="#spellwar" class="S102" data-aos="fade-right" data-aos-duration="1500">Spellwar</a>
+            <a href="diaporama.html" class="S201" data-aos="fade-right" data-aos-duration="2000">Diaporama</a>
+            <!--Pour l'instant il n'y a que trois projets mais je compte les rajouter au fur et à mesure-->
 
 
-        <div style="height: 100px;"></div>
-
-
-        <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-    </body>
-
-
-
-    <footer>
-        <h3>Me contacter</h3>
-        <div class="reseaux">
-      <a class="social-button linkedin" href="https://www.linkedin.com/in/arthur-baros-84b14929b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a class="social-button instagram" href="https://www.instagram.com/brs.64/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a class="social-button mail" href="mailto:arthur.baros64@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-      <a class="social-button phone" href="tel:0663575119" target="_blank"><i class="fa fa-phone"></i></a>
         </div>
 
-    </footer>
+        </div>
+
+    </section>
+
+
+
+    <div style="height: 100px;"></div>
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+
+    </script>
+</body>
+
+
+
+<footer>
+    <h3>Me contacter</h3>
+    <div class="reseaux">
+        <a class="social-button linkedin" href="https://www.linkedin.com/in/arthur-baros-84b14929b/" target="_blank"><i
+                class="fab fa-linkedin"></i></a>
+        <a class="social-button instagram" href="https://www.instagram.com/brs.64/" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+        <a class="social-button mail" href="mailto:arthur.baros64@gmail.com" target="_blank"><i
+                class="fas fa-envelope"></i></a>
+        <a class="social-button phone" href="tel:0663575119" target="_blank"><i class="fa fa-phone"></i></a>
+    </div>
+
+</footer>
+
 </html>
