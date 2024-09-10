@@ -11,10 +11,12 @@
 /* Utilisation de la police Poppins comme police par défaut */
 body {
     font-family: 'Poppins', sans-serif;
+    display:flex-end;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 81px;
 }
 
 /* Styles généraux pour le corps de la page */
@@ -220,15 +222,14 @@ h1 {
 
 .portfolio {
     padding: 0 10%;
-    margin-bottom: 10vh; /* Ajouter une marge en bas */
+    margin-bottom: 30vh; /* Ajouter une marge en bas */
     justify-content: center;
 }
 
 .titreport {
-    height: 30vh;
+    height: 10vh;
     display: flex;
-    align-items: center;
-    padding: 0 10%;
+    align-items: left;
 }
 .btn{
     position:initial ;
@@ -397,6 +398,34 @@ h1 {
     width: 20px;
     text-align: center;
 }
+
+
+.parcours {
+    display: flex;
+    flex-direction: column; 
+    align-items: left;
+    padding: 0 10%;
+    margin-bottom: 20vh;
+}
+
+.parcours h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.parcours .img {
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    max-width: 75%;
+    margin: 0 auto;
+    display: block;
+}
+
 
 footer {
     margin-bottom: 5vh;
