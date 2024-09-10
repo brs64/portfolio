@@ -230,6 +230,7 @@ h1 {
     height: 10vh;
     display: flex;
     align-items: left;
+    text-align: left;
 }
 .btn{
     position:initial ;
@@ -663,12 +664,8 @@ footer h3 {
         text-align: center; /* Centrer le texte */
     }
 
-    .description {
-        padding: 0 5%;
-        text-align: center; /* Centrer le texte */
-    }
-
-    .description h3, .description p {
-        font-size: 20px; /* Augmenter la taille de la police */
+    .popup-content{
+        max-width: 90%;
+        max-height: 90%;
     }
 }
