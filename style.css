@@ -619,7 +619,6 @@ footer h3 {
         text-align: center;
         height: auto;
         margin-bottom: 8vh;
-        margin-top: 20vh; /* Ajouter une marge en bas */
     }
 
     h1 {
@@ -673,9 +672,5 @@ footer h3 {
         align-items: center; /* Centrer les éléments horizontalement */
         text-align: center; /* Centrer le texte */
     }
-
-    .popup-content{
-        max-width: 90%;
-        max-height: 90%;
-    }
+    
 }
