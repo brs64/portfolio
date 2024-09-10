@@ -558,7 +558,7 @@ footer h3 {
 @media (max-width: 768px) {
     .navbar {
         padding: 10px 5%;
-        font-size: 15px;
+        font-size: 10px;
         align-items: center; /* Centrer horizontalement */
     }
 
@@ -567,7 +567,7 @@ footer h3 {
     }
 
     .navbar a {
-        display: flex; /* Empiler les liens verticalement */
+ /* Empiler les liens verticalement */
         flex-direction: column;
         font-size: 14px;
         margin-left: 5px;
@@ -616,12 +616,16 @@ footer h3 {
         justify-content: center;
     }
 
-   
+   .portfolio .btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
     .portfolio .btn a {
         width: 70%;
         margin: 5px 0;
     }
-
+    
     .titreport {
         margin-top: 10vh;
         height: 8vh;
