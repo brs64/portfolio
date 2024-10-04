@@ -134,8 +134,9 @@ body {
     display: flex;
     align-items: flex-end;
     padding: 0 10%;
-    margin-bottom: 20vh; /* Ajouter une marge en bas */
+    margin-bottom: 20vh;
 }
+
 
 .apropos {
     max-width: 600px; /* Largeur maximale de la section */
@@ -515,6 +516,33 @@ footer h3 {
 
 
 
+/* Styles pour les écrans de taille moyenne (ordinateurs) */
+@media (max-width: 1366px) and (max-height: 768px) {
+    .moi {
+        margin-top: 100px; /* Ajuster en fonction de la hauteur exacte de la navbar */
+        height: auto; /* Pour éviter que le contenu soit limité en hauteur */
+    }
+    .photo {
+        width: 400px;
+        height:400px
+    }
+/* Modifier le style pour que le display des pop up change pour un bon affichage*/
+    #cartomagic .popup-content
+{
+    width:670px;
+    height:490px;
+}
+#diaporama .popup-content{
+    width: 700px;
+    height:500px;
+}
+    .popup-content{
+        top:0;
+        transform: translateY(-10%);
+        
+    }
+}
+
 
 /* Styles pour les écrans de taille moyenne (tablettes) */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -582,6 +610,17 @@ footer h3 {
 
     .description h3, .description p {
         font-size: 22px; /* Augmenter la taille de la police */
+    }
+
+    .popup-content {
+        width: 80%; /* Rendre la largeur plus petite pour les tablettes */
+        height: auto; /* Laisse la hauteur s'ajuster automatiquement */
+        margin: 50px auto; /* Ajuste l'espacement au-dessus du pop-up */
+    }
+
+    .popup-content img {
+        max-width: 100%; /* L'image s'adapte à la largeur de la pop-up */
+        height: auto; /* Ajuste la hauteur de l'image automatiquement */
     }
 }
 
@@ -673,4 +712,21 @@ footer h3 {
         text-align: center; /* Centrer le texte */
     }
     
+/* Modifier le display pour un affichage correcte */
+    .popup-content {
+        width: 50%; /* Occupe presque toute la largeur de l'écran */
+        height: auto; /* Laisse la hauteur s'ajuster automatiquement */
+        margin: 20px auto; /* Moins d'espace au-dessus pour les petits écrans */
+        padding: 10px; /* Ajoute un léger padding pour un meilleur espacement du contenu */
+    }
+
+    .popup-content img {
+        max-width: 50%; /* L'image prend toute la largeur disponible */
+        height: auto; /* Laisse l'image s'ajuster */
+    }
+
+    .popup .close {
+        font-size: 10px; /* Réduis la taille du bouton de fermeture */
+    }
+
 }
