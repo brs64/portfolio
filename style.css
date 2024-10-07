@@ -48,6 +48,7 @@ body {
 }
 .navbar{
     margin-left: auto;
+    box-shadow: 5px;
 }
 /* Styles pour les liens de navigation */
 .navbar a {
@@ -522,25 +523,27 @@ footer h3 {
         margin-top: 100px; /* Ajuster en fonction de la hauteur exacte de la navbar */
         height: auto; /* Pour éviter que le contenu soit limité en hauteur */
     }
+    
     .photo {
         width: 400px;
-        height:400px
+        height:400px;
     }
 /* Modifier le style pour que le display des pop up change pour un bon affichage*/
+.popup-content{
+    top:0;
+    transform: translateY(-10%);
+    
+}
     #cartomagic .popup-content
 {
     width:670px;
-    height:490px;
+    height:95%;
 }
 #diaporama .popup-content{
     width: 700px;
-    height:500px;
+    height:95%;
 }
-    .popup-content{
-        top:0;
-        transform: translateY(-10%);
-        
-    }
+    
 }
 
 
