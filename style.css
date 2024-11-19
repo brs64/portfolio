@@ -1,5 +1,11 @@
-/* Importation de la police de caractères depuis Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* Palette de couleurs */
+:root {
+    --primary-color: #73188a; /* Bleu clair */
+    --secondary-color: #FFFFFF; /* Blanc */
+    --background-color: #121212; /* Noir/gris très foncé */
+    --accent-color: #aa00cc;
+    --text-color: #FFFFFF;
+}
 
 /* Réinitialisation des styles */
 * {
@@ -8,728 +14,461 @@
     box-sizing: border-box;
 }
 
-/* Utilisation de la police Poppins comme police par défaut */
 body {
     font-family: 'Poppins', sans-serif;
-    display:flex-end;
-}
-
-html {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
     scroll-behavior: smooth;
-    scroll-padding-top: 81px;
 }
 
-/* Styles généraux pour le corps de la page */
-body {
-    background-color: rgb(65, 34, 77); /* Couleur d'arrière-plan */
-    color: white; /* Couleur du texte */
-}
-
-/* Styles pour l'en-tête de la page */
+/* Header */
 .header {
-    position: fixed; /* Position fixe pour rester en haut de la page */
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%; /* Espacement interne */
-    background-color: rgb(65, 34, 77); /* Couleur d'arrière-plan */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 4; /* Empilement en avant */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Styles pour le logo */
 .logo {
-    font-size: 25px;
-    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
     text-decoration: none;
-    font-weight: 600;
 }
-.navbar{
-    margin-left: auto;
-    box-shadow: 5px;
-}
-/* Styles pour les liens de navigation */
+
 .navbar a {
-    font-size: 16px;
-    color: white;
+    margin-left: 20px;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    margin-left: 30px;
-    transition: .3s; /* Transition fluide lors du survol */
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: rgb(195,204,173); /* Changement de couleur au survol */
+    color: var(--primary-color);
 }
 
-.language-selector {
-    position: relative;
-    display: inline-block;
-    margin-left: auto;
-  }
-  
-  .button {
-    background-color: rgb(195,204,173);
-    color: rgb(65, 34, 77);
-    padding: 10px 15px;
-  font-size: 15px;
-  font-weight: bold;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  cursor: pointer;
-  }
-  
-  
-  .dropdown-content {
-    display: none;
-    font-size: 13px;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    background-color: rgb(65, 34, 77);
-    border: 2px solid rgb(195,204,173);
-    border-radius: 0px 0px 15px 15px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
-  }
-  
-  .dropdown-content a {
-    color: rgb(195,204,173);
-  padding: 8px 10px;
-  text-decoration: none;
-  display: block;
-  transition: 0.1s;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: rgb(195,204,173);
-    color: rgb(65, 34, 77);
-  }
-  
-  .dropdown-content a:focus {
-    background-color: rgb(65, 34, 77);
-    color: rgb(195,204,173);
-  }
-  
-  .dropdown-content #french:hover {
-    border-radius: 0px;
-  }
-  
-  .dropdown-content #spanish:hover {
-    border-radius: 0px 0px 13px 13px;
-  }
-  
-  .language-selector:hover button {
-    border-radius: 15px 15px 0px 0px;
-  }
-  
-  .language-selector:hover .dropdown-content {
-    display: block;
-  }
+/* Section d'accueil */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position:  0% 50%;
+    }
+    75% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50% ;
+    }
+}
 
-  
-/* Styles pour la section "À propos" */
-.moi {
-    height: 75vh;
+.accueil {
     display: flex;
-    align-items: flex-end;
-    padding: 0 10%;
-    margin-bottom: 20vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Occupe toute la hauteur de l'écran */
+    background: linear-gradient(45deg, var(--background-color), #202020);
+    background-size: 300% 300%; /* Plus grand pour une animation fluide */
+    animation: backgroundAnimation 10s infinite ease-in-out; /* Durée de 10s, boucle infinie */
+    text-align: center;
+    padding: 0 20px;
+}
+
+.accueil-content h1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.accueil-content p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    overflow: hidden;
+    white-space: nowrap; /* Empêche le texte de se casser en plusieurs lignes */
+    border-right: solid  var(--text-color);
+animation: ecriture 3s steps(77, end), clignotement 0.8s step-end infinite;
 }
 
 
-.apropos {
-    max-width: 600px; /* Largeur maximale de la section */
+@keyframes ecriture{
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes clignotement {
+    from, to { border-color: transparent }
+    50% { border-color:  var(--text-color) }
+  }
+/* Positionnement de la flèche */
+.scroll-down {
+    position: absolute;
+    bottom: 20px; /* Place la flèche tout en bas de la section */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem; /* Taille de la flèche */
+    color: var(--text-color);
+    text-decoration: none;
+    animation: bounce 1.5s infinite;
+    transition: color 0.3s ease;
+    cursor: pointer;
 }
 
-h1 {
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
+.scroll-down:hover {
+    color: var(--primary-color);
 }
+
+/* Animation de rebond */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px); /* Léger rebond vers le haut */
+    }
+}
+/* Section Qui suis-je */
+.moi {
+    padding: 100px 10% 50px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    gap: 50px;
+}
+
 
 .apropos h3 {
-    font-size: 30px;
-    font-weight: 700;
-    color: rgb(195,204,173); /* Couleur spécifique */
+    color: var(--primary-color);
+    font-size: 24px;
+    display: inline-block; /* Fixer la largeur au texte */
+    
 }
 
 .apropos p {
     font-size: 20px;
-    margin: 20px 0 40px;
+    margin-bottom: 20px;
+    max-width: 80%; /* Set a max-width to limit the length */
 }
 
-/* Styles pour la boîte du bouton */
-.apropos .btn-box {
-    display: flex;
-    justify-content: center;
-    width: 400px;
-    height: 60px;
-}
-
-/* Styles pour le bouton de téléchargement */
 .btn-box a {
-    position: relative;
-    display: inline-flex;
-    width: 300px;
-    height: 100%;
-    background-color: rgb(195,204,173);
-    border: 2px solid rgb(195,204,173);
-    border-radius: 8px;
-    font-size: 19px;
-    color: rgb(65, 34, 77);
-    letter-spacing: 1px;
-    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
     text-decoration: none;
-    font-weight: 600;
-    z-index: 1;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    transition: .5s; /* Transition fluide au survol */
-}
-
-/* Pseudo-élément pour l'effet de dégradé au survol */
-.btn-box a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: rgb(65, 34, 77);
-    z-index: -1;
-    transition: .5s;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-box a:hover {
-    color: rgb(195,204,173); /* Changement de couleur au survol */
+    transform: scale(1.1);
+    background-color: #3d1842; /* Bleu légèrement plus foncé */
 }
 
-.btn-box a:hover::before {
-    width: 100%; /* Extension complète au survol */
-}
-
-/* Styles pour l'image */
 .photo {
+    max-width: 300px;
     border-radius: 50%;
-    border: 5px solid rgb(132,95,230);
-    position: relative;
-    left: 30%; /* Collé au bord droit de l'écran */
-    transform: translateY(-50%); /* Décalage de moitié de la hauteur de l'image vers le haut pour la centrer verticalement */
-    margin-right: 250px; /* Marge à droite pour l'éloigner du bord */
-    margin-top:auto;
+    border: 5px solid var(--primary-color);
 }
 
+/* Portfolio */
 .portfolio {
-    padding: 0 10%;
-    margin-bottom: 30vh; /* Ajouter une marge en bas */
-    justify-content: center;
+    display: flex; /* Active Flexbox */
+    flex-direction: column; /* Dispose les éléments en colonne */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    height: 100vh; /* Occupe toute la hauteur de l'écran */
+    text-align: center; /* Centre le texte */
+    padding: 20px; /* Ajoute un peu d'espace autour */
 }
 
-.titreport {
-    height: 10vh;
-    display: flex;
-    align-items: left;
-    text-align: left;
+h1 {
+    font-size: 36px;
+    color: var(--text-color);
+    margin-bottom: 30px;
 }
-.btn{
-    position:initial ;
-}
+
 .btn a {
-    display: inline-flex;
-    width: 250px;
-    height: 100px;
-    font-size: 25px;
-    background-color: rgb(195,204,173);
-    border: 2px solid rgb(195,204,173);
-    border-radius: 8px;
-    color: rgb(65, 34, 77);
-    letter-spacing: 1px;
-    text-align: center;
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 40px 60px; /* Increased padding for a larger button */
+    font-size: 1.2rem; /* Increased font size for better visibility */
     text-decoration: none;
-    font-weight: 600;
-    z-index: 1;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    left: 13%;
-    margin-right: 40px; /* Ajout de marges à droite pour créer un espacement */
-    transition: .5s; /* Transition fluide au survol */
-    margin-bottom: 20px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: transform 0.2s ease;
 }
 
-/* Pseudo-élément pour l'effet de dégradé au survol */
-.btn a::before {
-    content: '';
-    position: absolute;
+
+/* Popups */
+.popup {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 0;
-    height: 100%;
-    background-color: rgb(65, 34, 77);
-    z-index: -1;
-    transition: .5s;
-}
-
-.btn a:hover {
-    color: rgb(195,204,173); /* Changement de couleur au survol */
-}
-
-.btn a:hover::before {
-    width: 100%; /* Extension complète au survol */
-}
-
-
-.popup{
-    
-    position: fixed;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
 }
 
-.popup-content{
-    width: 450px;
-    height: 600px;
-    color:rgb(195,204,173);
-    background: rgb(65, 34, 77);
-    margin: 100px auto;
-    position: relative;
-    border: 5px solid rgb(195,204,173);
-    border-radius: 8px;
-    display: flex;            
-    flex-direction: column;
-    align-items: center;  /* Centre les éléments horizontalement */
-    padding-top: 10px;    /* Contrôle l'espace par rapport au haut */
-    gap: 10px;            /* Ajoute un espace entre les éléments */
-    z-index:100;
+.popup:target {
+    display: flex;
 }
 
-#cartomagic .popup-content
-{
-    width:490px;
-    height:670px;
-}
-#diaporama .popup-content{
-    width: 500px;
-    height:700px;
-}
-.popup:target{
-    display: block;
-}
-.popup:target:focus:not(:focus-visible) {
-    display: none;
-  }
-.titreProj{
+.popup-content {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
     text-align: center;
-    top: 5px;
+    animation: zoomIn 0.3s ease;
 }
 
-
-
-.popup .img{
-    max-width: 80%;  
-    border: 2px solid rgb(195,204,173);
-    border-radius: 8px;
+.popup-content img {
+    width: 450px; 
+    height: 270px;
+    object-fit: cover;
+    border-radius: 5px; 
+    margin-bottom: 15px; 
 }
 
 .download-btn {
     display: inline-block;
-    background-color: rgb(65, 34, 77);
-    color: rgb(195, 204, 173);
-    padding: 10px 15px; 
-    border-radius: 8px; 
-    border: 2px solid rgb(195, 204, 173); 
-    text-decoration: none; 
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .download-btn:hover {
-    background-color: rgb(85, 44, 97);
+    transform: scale(1.1);
+    background-color: #005A9C;
 }
 
-.download-btn i {
-    margin-right: 5px;
-}
-
-.descrProj{
-    text-align: center;
-}
-.separator {
-    width: 100px;
-    border: none; 
-    height: 2px; 
-    background-color: rgb(195, 204, 173); 
-    margin: 5px 0; 
-    border-radius: 8px;
-}
-
-
-
-.etiquettes-container {
-    display: flex;
-    gap: 10px;
-}
-
-.etiquette {
-    background-color: rgb(195, 204, 173);
-    color: rgb(65, 34, 77);
-    padding: 5px 10px;
-    border-radius: 8px;
-    border: 2px solid rgb(195, 204, 173);
-    font-size: 14px;
-    font-weight: 200;
-}
-
-.close{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    cursor: pointer;
-    color: rgb(195,204,173);
+.close {
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
     text-decoration: none;
-    line-height: 0;
-    padding: 9px 0 11px;
-    width: 20px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.close:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.competences {
+    padding: 50px 10%;
+    background-color: var(--background-color);
     text-align: center;
 }
 
 
-.parcours {
-    display: flex;
-    flex-direction: column; 
-    align-items: left;
-    padding: 0 10%;
-    margin-bottom: 20vh;
+.liste-competences {
+    list-style: none;
+    padding: 0;
 }
 
-.parcours h1 {
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
+.liste-competences li {
     margin-bottom: 20px;
     text-align: left;
 }
 
-.parcours .img {
-    border: none;
-    border-radius: 0;
-    width: auto;
-    height: auto;
-    max-width: 75%;
-    margin: 0 auto;
-    display: block;
+.liste-competences li span {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.barre-competence {
+    background-color: #444;
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progression {
+    background-color: var(--primary-color);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Parcours */
+.parcours {
+    display: flex; /* Active Flexbox */
+    flex-direction: column; /* Dispose les éléments en colonne */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    height: 100vh; /* Assure que la section occupe toute la hauteur de l'écran */
+    text-align: center; /* Centre le texte */
+    padding: 20px; /* Ajoute un peu d'espace autour */
+}
+.timeline {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--primary-color);
+    z-index: 0;
+}
+
+/* Items de la timeline */
+.timeline-item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+/* Contenus alternés */
+.timeline-item.bottom .timeline-content {
+    margin-top: 80%; /* Décale en dessous */
+}
+
+.timeline-item.top .timeline-content {
+    margin-bottom: 80%; /* Décale au-dessus */
+}
+
+/* Contenus */
+.timeline-content {
+    position: relative;
+    padding: 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1;
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+/* Points des étapes */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-color);
+    border: 3px solid var(--secondary-color);
+    border-radius: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
 }
 
 
+
+/* Footer */
 footer {
-    margin-bottom: 5vh;
     text-align: center;
+    padding: 20px;
+    background-color: var(--background-color);
 }
 
 footer h3 {
-    font-size: 30px;
-    font-weight: 700;
-    color: rgb(195,204,173); /* Couleur spécifique */
-    padding: 0 10%;
-    text-decoration: dotted overline rgb(195,204,173);
-    color: rgb(217, 217, 217);
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
-.reseaux .social-button {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 3.125rem;
-    height: 3.125rem;
-    border: 0.125rem solid transparent;
-    padding: 0;
-    text-decoration: none;
+.reseaux a {
+    color: var(--primary-color);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.reseaux a:hover {
+    transform: scale(1.1);
+}
+
+
+.timeline-container {
     text-align: center;
-    color: rgb(65, 34, 77);
-    font-size: 1.5625rem;
-    font-weight: normal;
-    line-height: 2em;
-    border-radius: 1.6875rem;
-    transition: all 0.5s ease;
-    margin-right: 0.25rem;
-    margin-bottom: 0.25rem;
+    padding: 40px 20px;
 }
 
-.reseaux .social-button:hover, .reseaux .social-button:focus {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
+.title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
 }
 
-.reseaux .fa-linkedin, .fa-instagram, .fa-envelope, .fa-phone {
-    font-size: 25px;
-}
-
-.reseaux .social-button.linkedin {
-    background: rgb(195,204,173);
-}
-
-.reseaux .social-button.linkedin:hover {
-    color: rgb(195,204,173);
-    background: rgb(65, 34, 77);
-    border-color: rgb(195,204,173);
-}
-
-.reseaux .social-button.instagram {
-    background: rgb(195,204,173);
-}
-
-.reseaux .social-button.instagram:hover {
-    color: rgb(195,204,173);
-    background: rgb(65, 34, 77);
-    border-color: rgb(195,204,173);
-}
-
-.reseaux .social-button.mail {
-    background: rgb(195,204,173);
-}
-
-.reseaux .social-button.mail:hover {
-    color: rgb(195,204,173);
-    background: rgb(65, 34, 77);
-    border-color: rgb(195,204,173);
-}
-
-.reseaux .social-button.phone {
-    background: rgb(195,204,173);
-}
-
-.reseaux .social-button.phone:hover {
-    color: rgb(195,204,173);
-    background: rgb(65, 34, 77);
-    border-color: rgb(195,204,173);
-}
-
-
-
-/* Styles pour les écrans de taille moyenne (ordinateurs) */
-@media (max-width: 1366px) and (max-height: 768px) {
-    .moi {
-        margin-top: 100px; /* Ajuster en fonction de la hauteur exacte de la navbar */
-        height: auto; /* Pour éviter que le contenu soit limité en hauteur */
-    }
-    
-    .photo {
-        width: 400px;
-        height:400px;
-    }
-/* Modifier le style pour que le display des pop up change pour un bon affichage*/
-.popup-content{
-    top:0;
-    transform: translateY(-10%);
-    
-}
-    #cartomagic .popup-content
-{
-    width:670px;
-    height:95%;
-}
-#diaporama .popup-content{
-    width: 700px;
-    height:95%;
-}
-    
-}
-
-
-/* Styles pour les écrans de taille moyenne (tablettes) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .header {
-        padding: 15px 5%;
-    }
-
-    .logo {
-        font-size: 24px;
-    }
-
-    .navbar a {
-        font-size: 18px;
-        margin-left: 20px;
-    }
-
-    .moi {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        height: auto;
-        margin-bottom: 15vh;
-        margin-top: 15vh;
-    }
-
-    .apropos {
-        max-width: 80%;
-        margin-bottom: 20px;
-        margin-top: 50%;
-    }
-
-    .photo {
-        width: 60%;
-        height: auto;
-        margin: 20px 0;
-        position: static;
-        transform: none;
-        margin-right: 0;
-    }
-
-    .btn-box {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .btn-box a {
-        width: 70%;
-    }
-
-    .portfolio .btn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn a {
-        width: 70%;
-        margin: 10px 0;
-    }
-
-    .description {
-        padding: 0 5%;
-        text-align: center; /* Centrer le texte */
-    }
-
-    .description h3, .description p {
-        font-size: 22px; /* Augmenter la taille de la police */
-    }
-
-    .popup-content {
-        width: 80%; /* Rendre la largeur plus petite pour les tablettes */
-        height: auto; /* Laisse la hauteur s'ajuster automatiquement */
-        margin: 50px auto; /* Ajuste l'espacement au-dessus du pop-up */
-    }
-
-    .popup-content img {
-        max-width: 100%; /* L'image s'adapte à la largeur de la pop-up */
-        height: auto; /* Ajuste la hauteur de l'image automatiquement */
-    }
-}
-
-/* Styles pour les téléphones */
-@media (max-width: 768px) {
-    .header{
-        position: static; /* Navbar stays at the top on mobile */
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px 5%;
-        background-color: rgb(65, 34, 77); /* Ensure background is consistent */
-    }
-    .navbar {
-        position: static;
-        padding: 10px 5%;
-        font-size: 10px;
-        align-items: center; /* Centrer horizontalement */
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .navbar a {
- /* Empiler les liens verticalement */
-        flex-direction: column;
-        font-size: 14px;
-        margin-left: 5px;
-    }
-
-    .moi {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        height: auto;
-        margin-bottom: 8vh;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    .apropos {
-        max-width: 95%;
-        margin-bottom: 15px;
-    }
-    
-    .apropos .btn-box {
-        display: flex;
-        justify-content: center;
-        align-items: center; /* Centrer verticalement */
-        width: 100%; /* Utiliser la largeur maximale */
-        height: 60px;
-    }
-    .photo {
-        width: 90%;
-        height: auto;
-        margin: 10px 0;
-        position: static;
-        transform: none;
-        margin-right: 0;
-    }
-
-    .btn-box a {
-        width: 80%; /* Utiliser la largeur maximale */
-        max-width: 200px; /* Réduire encore la largeur maximale du bouton */
-    }
-
-    .portfolio {
-        justify-content: center;
-    }
-
-   .portfolio .btn{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   }
-    .portfolio .btn a {
-        width: 70%;
-        margin: 5px 0;
-    }
-    
-    .titreport {
-        margin-top: 10vh;
-        height: 8vh;
-        flex-direction: column; /* Afficher le titre et le rapport en colonne */
-        align-items: center; /* Centrer les éléments horizontalement */
-        text-align: center; /* Centrer le texte */
-    }
-    
-/* Modifier le display pour un affichage correcte */
-    .popup-content {
-        width: 50%; /* Occupe presque toute la largeur de l'écran */
-        height: auto; /* Laisse la hauteur s'ajuster automatiquement */
-        margin: 20px auto; /* Moins d'espace au-dessus pour les petits écrans */
-        padding: 10px; /* Ajoute un léger padding pour un meilleur espacement du contenu */
-    }
-
-    .popup-content img {
-        max-width: 50%; /* L'image prend toute la largeur disponible */
-        height: auto; /* Laisse l'image s'ajuster */
-    }
-
-    .popup .close {
-        font-size: 10px; /* Réduis la taille du bouton de fermeture */
-    }
-
-}

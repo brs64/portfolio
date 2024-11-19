@@ -6,78 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="fichiers/images/batman.jpg">
-    <title> Arthur Baros </title>
-
+    <title>Arthur Baros</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 </head>
-
 
 <body>
     <header class="header">
-        <a href="#" class=logo>Arthur Baros. </a>
-
+        <a href="#" class="logo">Arthur Baros</a>
         <nav class="navbar">
-            <a href="#quisuisje">Presentation</a>
+            <a href="#quisuisje">Présentation</a>
             <a href="#portfolio">Projets</a>
-            <a href="#Parcours">Parcours</a>
+            <a href="#parcours">Parcours</a>
         </nav>
-        <div class="language-selector">
-            <button class="button">Français</button>
-            <div class="dropdown-content">
-                <a id="english" href="index_en.html">Anglais</a>
-                <a id="spanish" href="index_es.html">Espagnol</a>
-            </div>
-        </div>
     </header>
-    <section class=moi id="quisuisje">
-        <article class=apropos data-AOS="fade-right" data-aos-duration="2000">
-            <h1>Qui suis-je ?</h1>
-            <h3>Arthur Baros</h3>
-            <p>Actuellement étudiant en deuxième année de BUT informatique et afin d'approfondir mes connaissances en
-                informatique,
-                découvrir le monde du travail dans le milieu qui m'intéresse et explorer le champ des possibilités, je
-                recherche actuellement un stage
-                pour la fin de ma deuxième année d'étude.</p>
-            <div class="btn-box">
-                <a href="fichiers/BAROS Arthur CV.pdf" download="fichiers/BAROS Arthur CV.pdf"
-                    target="_blank">Télecharger mon cv</a>
-            </div>
-        </article>
-        <img src="fichiers/images/Arthur.png" alt="Une photo de moi" width="500" height="500" class=photo data-AOS="fade-left"
-            data-aos-duration="2000">
-
+    <section class="accueil">
+        <div class="accueil-content">
+            <h1>Arthur Baros</h1>
+            <p>Bienvenue sur mon portfolio. Découvrez mes projets et mon parcours ! </p>
+            <a href="#quisuisje" class="scroll-down">↓</a>
+        </div>
+        
     </section>
 
-    <section class=portfolio id="portfolio">
-        <article class=titreport>
+    <section class="moi" id="quisuisje">
+        <article class="apropos">
+            <h3>Salut ! Moi c'est Arthur,</h3>
+            <p>
+                Je suis actuellement étudiant en deuxième année de <strong>BUT Informatique</strong>, parcours
+                <strong>IAMSI (Infrastructures et Applications des Systèmes Informatiques)</strong>. Passionné par les
+                nouvelles technologies et l'innovation, je cherche un stage pour enrichir mes connaissances dans
+                l'univers de l'informatique et découvrir le monde professionnel. Au cours de mes études, j'ai eu
+                l'opportunité de travailler sur divers projets techniques, allant de la création d'applications web en
+                <strong>HTML, CSS, JavaScript</strong> à la gestion de bases de données avec <strong>MySQL</strong>.
+            </p>
+            <div class="btn-box">
+                <a href="fichiers/BAROS Arthur CV.pdf" download="BAROS_Arthur_CV.pdf" target="_blank">Télécharger mon
+                    CV</a>
+            </div>
+        </article>
+        <img src="fichiers/images/Arthur.png" alt="Une photo de moi" class="photo" data-aos="fade-left"
+            data-aos-duration="2000">
+            
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <article class="titreport">
             <h1 data-aos="zoom-out-right">Mes Projets</h1>
         </article>
-
-
-        <div id="cartomagic" class="popup" href="#">
+        <div class="btn">
+            <a href="#cartomagic" data-aos="fade-right" data-aos-duration="1000">Cartomagic</a>
+            <a href="#spellwar" data-aos="fade-right" data-aos-duration="1500">Spellwar</a>
+            <a href="#diaporama" data-aos="fade-right" data-aos-duration="2000">Diaporama</a>
+        </div>
+        <div id="cartomagic" class="popup">
             <div class="popup-content">
                 <h2 class="titreProj">CARTOMAGIC</h2>
-
-                <img src="fichiers/images/Cartomagic.jpg" class="img">
-                <a href="fichiers/Cartomagic.zip" class="download-btn" download>
-                    <i class="fa fa-download" aria-hidden="true"></i> Télécharger
-                </a>
-                </a>
-                <hr class="separator">
-                <p class="descrProj">Cartomagic est un jeu de cartes magiques composé de 13 cartes, ces dernières sont
-                    définies aléatoirement à chaque nouvelle partie.
-                    Le but du jeu est d'avoir le plus de points possible à la fin de la partie. C'est un jeu prenant
-                    place dans le cmd et ayant pour but de nous initier au dévoloppement en C++
+                <img src="fichiers/images/Cartomagic.jpg" class="img" alt="Aperçu du projet Cartomagic">
+                <a href="fichiers/Cartomagic.zip" class="download-btn" download>Télécharger</a>
+                <p class="descrProj">
+                    Un jeu de cartes en C++ initiant au développement en ligne de commande.
                 </p>
-                <hr class="separator">
-
-                <p class="etiquette"> ⌂ C++ </p>
-                <a href="#portfolio" class="close">x</a>
+                <a href="#portfolio" class="close">Fermer</a>
             </div>
         </div>
-
-
         <div id="spellwar" class="popup" href="#">
             <div class="popup-content">
                 <h2 class="titreProj">SPELLWAR</h2>
@@ -87,15 +78,13 @@
                     <i class="fa fa-download" aria-hidden="true"></i> Télécharger
                 </a>
                 </a>
-                <hr class="separator">
+
                 <p class="descrProj">Spellwar est un jeu d’arcade au tour par tour dans lequel un joueur incarne un
                     magicien qui affronte des créatures maléfiques. C'est un jeu prenant place dans le cmd, ce dernier a
                     été imaginé pour nous initier de manière plus poussée au développement en C++
                 </p>
-                <hr class="separator">
 
-                <p class="etiquette"> ⌂ C++ </p>
-                <a href="#portfolio" class="close">x</a>
+                <a href="#portfolio" class="close">Fermer</a>
             </div>
         </div>
 
@@ -107,71 +96,121 @@
                 <img src="fichiers/images/Diaporama.jpg" class="img">
                 <a href="https://github.com/brs64/S2.01" class="download-btn">Consulter</a>
                 </a>
-                <hr class="separator">
+
                 <p class="descrProj">C'est une application permettant d’afficher des images sous la forme d’un
                     diaporama. Un diaporama étant défini comme un regroupement d’images possédant un titre. Plus tard
                     nous avons mis à jour l'application pour qu'elle utilise des données externes provenant d'une base
                     de donnée. Ce projet avait pour but de nous apprendre à lier le SQL à d'autres langages de
                     programmation ainsi qu'au développement avancé en C++
                 </p>
-                <hr class="separator">
-                <div class="etiquettes-container">
-                    <p class="etiquette">⌂ C++</p>
-                    <p class="etiquette">⌂ QT Creator</p>
-                    <p class="etiquette">⌂ SQL</p>
-                    <a href="#portfolio" class="close">x</a>
+
+                <a href="#portfolio" class="close">Fermer</a>
+
+            </div>
+        </div>
+        <!-- Autres projets ici -->
+    </section>
+
+    <section class="competences" id="competences">
+        <h1>Mes Compétences</h1>
+        <ul class="liste-competences">
+            <li>
+                <span>PHP</span>
+                <div class="barre-competence">
+                    <div class="progression" style="width: 95%;"></div>
+                </div>
+            </li>
+            <li>
+                <span>HTML/CSS</span>
+                <div class="barre-competence">
+                    <div class="progression" style="width: 92%;"></div>
+                </div>
+            </li>
+            <li>
+                <span>SQL</span>
+                <div class="barre-competence">
+                    <div class="progression" style="width: 90%;"></div>
+                </div>
+            </li>
+            <li>
+                <span>C++</span>
+                <div class="barre-competence">
+                    <div class="progression" style="width: 80%;"></div>
+                </div>
+            </li>
+            <li>
+                <span>JavaScript</span>
+                <div class="barre-competence">
+                    <div class="progression" style="width: 75%;"></div>
+                </div>
+            </li>
+             <li>
+                <span>Python</span>
+                <div class="barre-competence">
+                    <div class="progression" style="width: 72%;"></div>
+                </div>
+            </li>
+            <li>
+                <span>Java</span>
+                <div class="barre-competence">
+                    <div class="progression" style="width: 70%;"></div>
+                </div>
+            </li>
+           
+    
+        </ul>
+    </section>
+    
+
+    
+    <section class="parcours" id="parcours">
+        <div class="timeline-container">
+            <h1>Mon Parcours Scolaire</h1>
+            <div class="timeline">
+                <div class="timeline-item top ">
+                    <div class="timeline-content">
+                        <h3>Université</h3>
+                        <p>Actuellement étudiant en <strong>BUT Informatique</strong>, je développe et perfectionne mes
+                            compétences en programmation,
+                            développement web, gestion de bases de données et beaucoup d'autres choses !</p>
+
+                    </div>
+                </div>
+                <div class="timeline-item bottom">
+                    <div class="timeline-content">
+                        <h3>Lycée</h3>
+                        <p>Au lycée, j'ai choisi la spécialité <strong>Numérique et Sciences Informatiques
+                                (NSI)</strong>,
+                            ce qui m'a permis de plonger plus profondément dans le monde de l'informatique.</p>
+                    </div>
+                </div>
+                <div class="timeline-item top">
+                    <div class="timeline-content">
+                        <h3>Collège</h3>
+                        <p>Mon intérêt pour l'informatique a commencé au collège, où j'ai eu l'occasion de découvrir
+                            cet univers fascinant. Durant cette période, j'ai eu mes premières interactions avec les
+                            ordinateurs !</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-
-
-        <div class="btn">
-            <a href="#cartomagic" class="S101" data-aos="fade-right" data-aos-duration="1000">Cartomagic</a>
-            <a href="#spellwar" class="S102" data-aos="fade-right" data-aos-duration="1500">Spellwar</a>
-            <a href="#diaporama" class="S201" data-aos="fade-right" data-aos-duration="2000">Diaporama</a>
-            <!--Pour l'instant il n'y a que trois projets mais je compte les rajouter au fur et à mesure-->
-
-
-        </div>
-
-        </div>
-
     </section>
 
-    <section class="parcours" id="Parcours">
-        <article class="apropos" data-AOS="fade-right" data-aos-duration="2000">
-            <h1>Mon Parcours</h1>
-        </article>
-        <img src="fichiers/images/Parcours.png" alt="Mon parcours en image" class="img" data-AOS="flip-down" data-aos-duration="4000">
-    </section>
-
-
+    <footer>
+        <h3>Me contacter</h3>
+        <div class="reseaux">
+            <a class="social-button linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="social-button instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="social-button mail" href="mailto:arthur.baros64@gmail.com" target="_blank"><i
+                    class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+   
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script>
-
-    </script>
 </body>
-
-
-
-<footer>
-    <h3>Me contacter</h3>
-    <div class="reseaux">
-        <a class="social-button linkedin" href="https://www.linkedin.com/in/arthur-baros-84b14929b/" target="_blank"><i
-                class="fab fa-linkedin"></i></a>
-        <a class="social-button instagram" href="https://www.instagram.com/brs.64/" target="_blank"><i
-                class="fab fa-instagram"></i></a>
-        <a class="social-button mail" href="mailto:arthur.baros64@gmail.com" target="_blank"><i
-                class="fas fa-envelope"></i></a>
-        <a class="social-button phone" href="tel:0663575119" target="_blank"><i class="fa fa-phone"></i></a>
-    </div>
-
-</footer>
 
 </html>
