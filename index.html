@@ -22,7 +22,15 @@
             <a href="#portfolio">Projets</a>
             <a href="#parcours">Parcours</a>
         </nav>
-    </header>
+        <div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <span class="ball"></span>
+            </label>
+          </div></header>
+    
     <section class="accueil">
         <div class="accueil-content">
             <h1>Arthur Baros</h1>
@@ -235,6 +243,30 @@
     <script>
         AOS.init();
     </script>
+    <script>
+        const themeToggleButton = document.getElementById('checkbox');
+        const savedTheme = localStorage.getItem('checkbox');
+        const defaultTheme = 'light'; // Charge le thème clair par défaut
+        
+        // Appliquer le thème par défaut ou celui sauvegardé
+        const themeToApply = savedTheme || defaultTheme;
+        document.documentElement.classList.add(`${themeToApply}-theme`);
+        localStorage.setItem('theme', themeToApply);
+    
+        themeToggleButton.addEventListener('click', () => {
+            const isCurrentlyLight = document.documentElement.classList.contains('light-theme');
+            const newTheme = isCurrentlyLight ? 'dark' : 'light';
+    
+            // Retirer l'ancien thème et appliquer le nouveau
+            document.documentElement.classList.remove('light-theme', 'dark-theme');
+            document.documentElement.classList.add(`${newTheme}-theme`);
+    
+            // Sauvegarder la préférence et mettre à jour l'icône
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+    
+    
 </body>
 
 </html>
