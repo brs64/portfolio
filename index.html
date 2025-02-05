@@ -9,20 +9,22 @@
   name="description"
   content="Un site vitrine présentant mes différents projets, mes compétences et mon parcours" />
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="fichiers/images/batman.jpg">
+    <link rel="icon" type="image/png" href="fichiers/images/logo_light.png">
     <title>Arthur Baros</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
-        <a href="#" class="logo">Arthur Baros</a>
+        <section class="navigation">
+        <a href="#"><img src="fichiers/images/logo_light.png" alt="Arthur Baros" class="logo"></a>
         <nav class="navbar">
             <a href="#quisuisje">Présentation</a>
             <a href="#portfolio">Projets</a>
             <a href="#parcours">Parcours</a>
         </nav>
         <div>
+        </section>
             <input type="checkbox" class="checkbox" id="checkbox">
             <label for="checkbox" class="checkbox-label">
               <i class="fas fa-moon"></i>
@@ -240,28 +242,33 @@
         }
     }
 </script>
-    <script>
-        const themeToggleButton = document.getElementById('checkbox');
-        const savedTheme = localStorage.getItem('checkbox');
-        const defaultTheme = 'light'; // Charge le thème clair par défaut
-        
-        // Appliquer le thème par défaut ou celui sauvegardé
-        const themeToApply = savedTheme || defaultTheme;
-        document.documentElement.classList.add(`${themeToApply}-theme`);
-        localStorage.setItem('theme', themeToApply);
-    
-        themeToggleButton.addEventListener('click', () => {
-            const isCurrentlyLight = document.documentElement.classList.contains('light-theme');
-            const newTheme = isCurrentlyLight ? 'dark' : 'light';
-    
-            // Retirer l'ancien thème et appliquer le nouveau
-            document.documentElement.classList.remove('light-theme', 'dark-theme');
-            document.documentElement.classList.add(`${newTheme}-theme`);
-    
-            // Sauvegarder la préférence et mettre à jour l'icône
-            localStorage.setItem('theme', newTheme);
-        });
-    </script>
+<script>
+    const themeToggleButton = document.getElementById('checkbox');
+    const savedTheme = localStorage.getItem('theme');
+    const defaultTheme = 'light'; // Charge le thème clair par défaut
+    const favicon = document.querySelector("link[rel~='icon']");
+
+    // Appliquer le thème par défaut ou celui sauvegardé
+    const themeToApply = savedTheme || defaultTheme;
+    document.documentElement.classList.add(`${themeToApply}-theme`);
+    favicon.href = themeToApply === 'light' ? 'fichiers/images/logo_light.png' : 'fichiers/images/logo_dark.png';
+    localStorage.setItem('theme', themeToApply);
+
+    themeToggleButton.addEventListener('click', () => {
+        const isCurrentlyLight = document.documentElement.classList.contains('light-theme');
+        const newTheme = isCurrentlyLight ? 'dark' : 'light';
+
+        // Retirer l'ancien thème et appliquer le nouveau
+        document.documentElement.classList.remove('light-theme', 'dark-theme');
+        document.documentElement.classList.add(`${newTheme}-theme`);
+
+        // Mettre à jour l'icône de la page
+        favicon.href = newTheme === 'light' ? 'fichiers/images/logo_light.png' : 'fichiers/images/logo_dark.png';
+
+        // Sauvegarder la préférence
+        localStorage.setItem('theme', newTheme);
+    });
+</script>
     
     
 </body>
