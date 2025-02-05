@@ -247,11 +247,13 @@
     const savedTheme = localStorage.getItem('theme');
     const defaultTheme = 'light'; // Charge le thème clair par défaut
     const favicon = document.querySelector("link[rel~='icon']");
+    const headerLogo = document.querySelector('.header .logo');
 
     // Appliquer le thème par défaut ou celui sauvegardé
     const themeToApply = savedTheme || defaultTheme;
     document.documentElement.classList.add(`${themeToApply}-theme`);
     favicon.href = themeToApply === 'light' ? 'fichiers/images/logo_light.png' : 'fichiers/images/logo_dark.png';
+    headerLogo.src = themeToApply === 'light' ? 'fichiers/images/logo_light.png' : 'fichiers/images/logo_dark.png';
     localStorage.setItem('theme', themeToApply);
 
     themeToggleButton.addEventListener('click', () => {
@@ -262,8 +264,9 @@
         document.documentElement.classList.remove('light-theme', 'dark-theme');
         document.documentElement.classList.add(`${newTheme}-theme`);
 
-        // Mettre à jour l'icône de la page
+        // Mettre à jour l'icône de la page et le logo du header
         favicon.href = newTheme === 'light' ? 'fichiers/images/logo_light.png' : 'fichiers/images/logo_dark.png';
+        headerLogo.src = newTheme === 'light' ? 'fichiers/images/logo_light.png' : 'fichiers/images/logo_dark.png';
 
         // Sauvegarder la préférence
         localStorage.setItem('theme', newTheme);
