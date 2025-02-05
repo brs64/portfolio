@@ -383,7 +383,17 @@ h1 {
     
     
 }
-
+@media (max-width: 800px){
+    .accueil-content h1 {
+        font-size: 5vw;
+    }
+    .accueil-content p {
+        font-size: 3vw;
+        white-space: normal;
+        animation: none;
+        border-right: none;
+    }
+}
 @media (max-width: 768px) {
 
     .navbar a {
@@ -454,12 +464,7 @@ h1 {
         font-size: 24px;
     }
 
-    .accueil-content p {
-        font-size: 16px;
-        white-space: normal;
-        animation: none;
-        border-right: none;
-    }
+
     
     .competences {
         margin-top: 20vh;
