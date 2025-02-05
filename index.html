@@ -65,82 +65,69 @@
         <article class="titreport">
             <h1 data-aos="zoom-out-right">Mes Projets</h1>
         </article>
-        <div class="btn">
-            <a href="#cartomagic" data-aos="fade-right" data-aos-duration="1000">Cartomagic</a>
-            <a href="#spellwar" data-aos="fade-right" data-aos-duration="1500">Spellwar</a>
-            <a href="#diaporama" data-aos="fade-right" data-aos-duration="2000">Diaporama</a>
-            <a href="#vhs" data-aos="fade-right" data-aos-duration="2500">V. H. S.</a>
-        </div>
-        <div id="cartomagic" class="popup">
-            <div class="popup-content">
-                <h2 class="titreProj">CARTOMAGIC</h2>
-                <img src="fichiers/images/Cartomagic.jpg" class="img" alt="Aperçu du projet Cartomagic">
-                <a href="https://github.com/brs64/Cartomagic" class="download-btn" download>Consulter</a>
-                <p class="descrProj">
-                    Un jeu de cartes en C++ initiant au développement en ligne de commande.
-                </p>
-                <a href="#portfolio" class="close">Fermer</a>
+        <div class="projects">
+            <div class="project" data-aos="fade-right" data-aos-duration="1000" onclick="openPopup('cartomagic')">
+                <img src="fichiers/images/Cartomagic.jpg" alt="Cartomagic">
+                <div class="project-title">Cartomagic</div>
+            </div>
+            <div class="project" data-aos="fade-right" data-aos-duration="1500" onclick="openPopup('spellwar')">
+                <img src="fichiers/images/Spellwar.jpg" alt="Spellwar">
+                <div class="project-title">Spellwar</div>
+            </div>
+            <div class="project" data-aos="fade-right" data-aos-duration="2000" onclick="openPopup('diaporama')">
+                <img src="fichiers/images/Diaporama.jpg" alt="Diaporama">
+                <div class="project-title">Diaporama</div>
+            </div>
+            <div class="project" data-aos="fade-right" data-aos-duration="2500" onclick="openPopup('vhs')">
+                <img src="fichiers/images/VHS.png" alt="VHS">
+                <div class="project-title">V. H. S.</div>
             </div>
         </div>
-        <div id="spellwar" class="popup" href="#">
-            <div class="popup-content">
-                <h2 class="titreProj">SPELLWAR</h2>
-
-                <img src="fichiers/images/Spellwar.jpg" class="img">
-                <a href="https://github.com/brs64/Spellwar" class="download-btn" download>
-                    Consulter
-                </a>
-
-                <p class="descrProj">Spellwar est un jeu d’arcade au tour par tour dans lequel un joueur incarne un
-                    magicien qui affronte des créatures maléfiques. C'est un jeu prenant place dans le cmd, ce dernier a
-                    été imaginé pour nous initier de manière plus poussée au développement en C++
-                </p>
-
-                <a href="#portfolio" class="close">Fermer</a>
-            </div>
-        </div>
-
-
-        <div id="diaporama" class="popup" href="#">
-            <div class="popup-content">
-                <h2 class="titreProj">LECTEUR DE DIAPORAMA</h2>
-
-                <img src="fichiers/images/Diaporama.jpg" class="img">
-                <a href="https://github.com/brs64/S2.01" class="download-btn">Consulter</a>
-                </a>
-
-                <p class="descrProj">C'est une application permettant d’afficher des images sous la forme d’un
-                    diaporama. Un diaporama étant défini comme un regroupement d’images possédant un titre. Plus tard
-                    nous avons mis à jour l'application pour qu'elle utilise des données externes provenant d'une base
-                    de donnée. Ce projet avait pour but de nous apprendre à lier le SQL à d'autres langages de
-                    programmation ainsi qu'au développement avancé en C++
-                </p>
-
-                <a href="#portfolio" class="close">Fermer</a>
-
-            </div>
-        </div>
-
-        <div id="vhs" class="popup" href="#">
-            <div class="popup-content">
-                <h2 class="titreProj">Video Home Share</h2>
-
-                <img src="fichiers/images/VHS.png" class="img">
-                <a href="https://github.com/jvlatrille/Video-Home-Share" class="download-btn">Consulter</a>
-                </a>
-
-                <p class="descrProj">C'est une application web centrée sur le cinéma et les films, ce projet a pour but
-                    de nous apprendre la programmation en PHP et le développement d'une application web complexe mais
-                    aussi la création et l'implémentation d'une base de données dans un cadre concret
-                </p>
-
-                <a href="#portfolio" class="close">Fermer</a>
-
-            </div>
-        </div>
-
-        <!-- Autres projets ici -->
     </section>
+
+    <!-- Popups -->
+    <div id="cartomagic" class="popup" onclick="closePopup(event, 'cartomagic')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <h2 class="titreProj">CARTOMAGIC</h2>
+            <img src="fichiers/images/Cartomagic.jpg" class="img" alt="Aperçu du projet Cartomagic">
+            <a href="https://github.com/brs64/Cartomagic" target="blank" class="download-btn" download><i class="fab fa-github"></i> Consulter</a>
+            <p class="descrProj">
+                Un jeu de cartes en C++ initiant au développement en ligne de commande.
+            </p>
+        </div>
+    </div>
+    <div id="spellwar" class="popup" onclick="closePopup(event, 'spellwar')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <h2 class="titreProj">SPELLWAR</h2>
+            <img src="fichiers/images/Spellwar.jpg" class="img" alt="Aperçu du projet Spellwar">
+            <a href="https://github.com/brs64/Spellwar" target="blank" class="download-btn" download><i class="fab fa-github"></i> Consulter</a>
+            <p class="descrProj">
+                Spellwar est un jeu d’arcade au tour par tour dans lequel un joueur incarne un magicien qui affronte des créatures maléfiques. C'est un jeu prenant place dans le cmd, ce dernier a été imaginé pour nous initier de manière plus poussée au développement en C++.
+            </p>
+        </div>
+    </div>
+    <div id="diaporama" class="popup" onclick="closePopup(event, 'diaporama')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <h2 class="titreProj">LECTEUR DE DIAPORAMA</h2>
+            <img src="fichiers/images/Diaporama.jpg" class="img" alt="Aperçu du projet Diaporama">
+            <a href="https://github.com/brs64/S2.01" target="blank" class="download-btn">
+                <i class="fab fa-github"></i> Consulter
+            </a>
+            <p class="descrProj">
+                C'est une application permettant d’afficher des images sous la forme d’un diaporama. Un diaporama étant défini comme un regroupement d’images possédant un titre. Plus tard nous avons mis à jour l'application pour qu'elle utilise des données externes provenant d'une base de donnée. Ce projet avait pour but de nous apprendre à lier le SQL à d'autres langages de programmation ainsi qu'au développement avancé en C++.
+            </p>
+        </div>
+    </div>
+    <div id="vhs" class="popup" onclick="closePopup(event, 'vhs')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <h2 class="titreProj">Video Home Share</h2>
+            <img src="fichiers/images/VHS.png" class="img" alt="Aperçu du projet VHS">
+            <a href="https://github.com/jvlatrille/Video-Home-Share" target="blank" class="download-btn"><i class="fab fa-github"></i> Consulter</a>
+            <p class="descrProj">
+                C'est une application web centrée sur le cinéma et les films, ce projet a pour but de nous apprendre la programmation en PHP et le développement d'une application web complexe mais aussi la création et l'implémentation d'une base de données dans un cadre concret.
+            </p>
+        </div>
+    </div>
 
     <section class="competences" id="competences">
         <h1>Mes Compétences</h1>
@@ -231,10 +218,9 @@
         <h3>Me contacter</h3>
         <div class="reseaux">
             <a class="social-button phone" href="tel:+33663575119" target="_blank"><i class="fa fa-phone"></i></a>
+            <a class="social-button mail" href="mailto:arthur.baros64@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
             <a class="social-button linkedin" href="https://www.linkedin.com/in/arthur-baros-84b14929b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a class="social-button instagram" href="https://www.instagram.com/brs.64/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a class="social-button mail" href="mailto:arthur.baros64@gmail.com" target="_blank"><i
-                    class="fas fa-envelope"></i></a>
+            <a class="social-button github" href="https://github.com/brs64" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>
 
@@ -243,6 +229,17 @@
     <script>
         AOS.init();
     </script>
+    <script>
+    function openPopup(popupId) {
+        document.getElementById(popupId).style.display = 'flex';
+    }
+
+    function closePopup(event, popupId) {
+        if (event.target.classList.contains('popup')) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+    }
+</script>
     <script>
         const themeToggleButton = document.getElementById('checkbox');
         const savedTheme = localStorage.getItem('checkbox');
