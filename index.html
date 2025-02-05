@@ -16,15 +16,14 @@
 
 <body>
     <header class="header">
-        <section class="navigation">
+        <div class="navigation">
         <a href="#"><img src="fichiers/images/logo_light.png" alt="Arthur Baros" class="logo"></a>
         <nav class="navbar">
             <a href="#quisuisje">Présentation</a>
             <a href="#portfolio">Projets</a>
             <a href="#parcours">Parcours</a>
         </nav>
-        <div>
-        </section>
+    </div>
             <input type="checkbox" class="checkbox" id="checkbox">
             <label for="checkbox" class="checkbox-label">
               <i class="fas fa-moon"></i>
@@ -255,6 +254,9 @@
     favicon.href = themeToApply === 'light' ? 'fichiers/images/logo_light.png' : 'fichiers/images/logo_dark.png';
     headerLogo.src = themeToApply === 'light' ? 'fichiers/images/logo_light.png' : 'fichiers/images/logo_dark.png';
     localStorage.setItem('theme', themeToApply);
+
+    // Adapter le checkbox au thème par défaut sauvegardé
+    themeToggleButton.checked = themeToApply === 'dark';
 
     themeToggleButton.addEventListener('click', () => {
         const isCurrentlyLight = document.documentElement.classList.contains('light-theme');
