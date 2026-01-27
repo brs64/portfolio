@@ -5,43 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Arthur Baros" />
-<meta
-  name="description"
-  content="Un site vitrine présentant mes différents projets, mes compétences et mon parcours" />
+    <meta name="description" content="Portfolio d'Arthur Baros - Étudiant en BUT Informatique, développeur web passionné. Découvrez mes projets, compétences et parcours." />
+    <meta name="keywords" content="Arthur Baros, portfolio, développeur web, BUT Informatique, HTML, CSS, JavaScript, PHP, C++, développement web" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthurbaros.fr/">
+    <meta property="og:title" content="Arthur Baros - Portfolio Développeur Web">
+    <meta property="og:description" content="Étudiant en BUT Informatique passionné par les nouvelles technologies. Découvrez mes projets et compétences en développement web.">
+    <meta property="og:image" content="fichiers/images/Arthur.png">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://arthurbaros.fr/">
+    <meta name="twitter:title" content="Arthur Baros - Portfolio Développeur Web">
+    <meta name="twitter:description" content="Étudiant en BUT Informatique passionné par les nouvelles technologies. Découvrez mes projets et compétences.">
+    <meta name="twitter:image" content="fichiers/images/Arthur.png">
+
+    <!-- Autres métadonnées -->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#c359dd">
+    <link rel="canonical" href="https://arthurbaros.fr/">
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="fichiers/images/logo_light.png">
-    <title>Arthur Baros</title>
+    <title>Arthur Baros - Portfolio Développeur Web</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Données structurées JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Arthur Baros",
+        "jobTitle": "Étudiant en BUT Informatique / Développeur Web",
+        "url": "https://arthurbaros.fr",
+        "email": "arthur.baros64@gmail.com",
+        "telephone": "+33663575119",
+        "sameAs": [
+            "https://www.linkedin.com/in/arthur-baros/",
+            "https://github.com/brs64"
+        ],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "BUT Informatique"
+        },
+        "knowsAbout": ["PHP", "HTML", "CSS", "SQL", "C++", "JavaScript", "Python", "Java"],
+        "description": "Étudiant en deuxième année de BUT Informatique, parcours IAMSI. Passionné par les nouvelles technologies et le développement web."
+    }
+    </script>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" role="banner">
         <div class="navigation">
-        <a href="#"><img src="fichiers/images/logo_light.png" alt="Arthur Baros" class="logo"></a>
-        <nav class="navbar">
+        <a href="#" aria-label="Retour à l'accueil"><img src="fichiers/images/logo_light.png" alt="Logo Arthur Baros - Retour à l'accueil" class="logo"></a>
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
             <a href="#quisuisje">Présentation</a>
             <a href="#portfolio">Projets</a>
             <a href="#parcours">Parcours</a>
         </nav>
     </div>
-            <input type="checkbox" class="checkbox" id="checkbox">
+            <input type="checkbox" class="checkbox" id="checkbox" aria-label="Basculer entre thème clair et sombre">
             <label for="checkbox" class="checkbox-label">
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon" aria-hidden="true"></i>
+              <i class="fas fa-sun" aria-hidden="true"></i>
               <span class="ball"></span>
             </label>
           </div></header>
     
-    <section class="accueil">
+    <main role="main">
+    <section class="accueil" id="accueil" aria-label="Section d'accueil">
         <div class="accueil-content">
             <h1>Arthur Baros</h1>
             <p>Bienvenue sur mon portfolio. Découvrez mes projets et mon parcours ! </p>
-            <a href="#quisuisje" class="scroll-down">↓</a>
+            <a href="#quisuisje" class="scroll-down" aria-label="Faire défiler vers la section présentation">↓</a>
         </div>
 
     </section>
 
-    <section class="moi" id="quisuisje">
+    <section class="moi" id="quisuisje" aria-label="Section présentation">
         <article class="apropos">
             <h3>Salut ! Moi c'est Arthur,</h3>
             <p>
@@ -57,80 +101,80 @@
                     CV</a>
             </div>
         </article>
-        <img src="fichiers/images/Arthur.png" alt="Une photo de moi" class="photo" data-aos="fade-left"
+        <img src="fichiers/images/Arthur.png" alt="Portrait d'Arthur Baros" class="photo" loading="lazy" data-aos="fade-left"
             data-aos-duration="2000">
 
     </section>
 
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="portfolio" aria-label="Section projets">
         <article class="titreport">
             <h1 data-aos="zoom-out-right">Mes Projets</h1>
         </article>
-        <div class="projects">
-            <div class="project" data-aos="fade-right" data-aos-duration="1000" onclick="openPopup('cartomagic')">
-                <img src="fichiers/images/Cartomagic.jpg" alt="Cartomagic">
+        <div class="projects" role="list">
+            <div class="project" role="listitem" tabindex="0" data-aos="fade-right" data-aos-duration="1000" onclick="openPopup('cartomagic')" onkeypress="if(event.key==='Enter') openPopup('cartomagic')" aria-label="Projet Cartomagic - Cliquez pour plus de détails">
+                <img src="fichiers/images/Cartomagic.jpg" alt="Aperçu du projet Cartomagic - Jeu de cartes en C++" loading="lazy">
                 <div class="project-title">Cartomagic</div>
             </div>
-            <div class="project" data-aos="fade-right" data-aos-duration="1500" onclick="openPopup('spellwar')">
-                <img src="fichiers/images/Spellwar.jpg" alt="Spellwar">
+            <div class="project" role="listitem" tabindex="0" data-aos="fade-right" data-aos-duration="1500" onclick="openPopup('spellwar')" onkeypress="if(event.key==='Enter') openPopup('spellwar')" aria-label="Projet Spellwar - Cliquez pour plus de détails">
+                <img src="fichiers/images/Spellwar.jpg" alt="Aperçu du projet Spellwar - Jeu d'arcade en C++" loading="lazy">
                 <div class="project-title">Spellwar</div>
             </div>
-            <div class="project" data-aos="fade-right" data-aos-duration="2000" onclick="openPopup('diaporama')">
-                <img src="fichiers/images/Diaporama.jpg" alt="Diaporama">
+            <div class="project" role="listitem" tabindex="0" data-aos="fade-right" data-aos-duration="2000" onclick="openPopup('diaporama')" onkeypress="if(event.key==='Enter') openPopup('diaporama')" aria-label="Projet Diaporama - Cliquez pour plus de détails">
+                <img src="fichiers/images/Diaporama.jpg" alt="Aperçu du projet Diaporama - Lecteur de diaporama en C++ avec MySQL" loading="lazy">
                 <div class="project-title">Diaporama</div>
             </div>
-            <div class="project" data-aos="fade-right" data-aos-duration="2500" onclick="openPopup('vhs')">
-                <img src="fichiers/images/VHS.png" alt="VHS">
+            <div class="project" role="listitem" tabindex="0" data-aos="fade-right" data-aos-duration="2500" onclick="openPopup('vhs')" onkeypress="if(event.key==='Enter') openPopup('vhs')" aria-label="Projet Video Home Share - Cliquez pour plus de détails">
+                <img src="fichiers/images/VHS.png" alt="Aperçu du projet Video Home Share - Application web PHP" loading="lazy">
                 <div class="project-title">V. H. S.</div>
             </div>
         </div>
     </section>
 
     <!-- Popups -->
-    <div id="cartomagic" class="popup" onclick="closePopup(event, 'cartomagic')">
+    <div id="cartomagic" class="popup" role="dialog" aria-modal="true" aria-labelledby="cartomagic-title" onclick="closePopup(event, 'cartomagic')">
         <div class="popup-content" onclick="event.stopPropagation()">
-            <h2 class="titreProj">CARTOMAGIC</h2>
-            <img src="fichiers/images/Cartomagic.jpg" class="img" alt="Aperçu du projet Cartomagic">
-            <a href="https://github.com/brs64/Cartomagic" target="blank" class="download-btn" download><i class="fab fa-github"></i> Consulter</a>
+            <h2 class="titreProj" id="cartomagic-title">CARTOMAGIC</h2>
+            <img src="fichiers/images/Cartomagic.jpg" class="img" alt="Aperçu du projet Cartomagic - Jeu de cartes en C++" loading="lazy">
+            <a href="https://github.com/brs64/Cartomagic" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet Cartomagic sur GitHub"><i class="fab fa-github" aria-hidden="true"></i> Consulter</a>
             <p class="descrProj">
                 Un jeu de cartes en C++ initiant au développement en ligne de commande.
             </p>
         </div>
     </div>
-    <div id="spellwar" class="popup" onclick="closePopup(event, 'spellwar')">
+    <div id="spellwar" class="popup" role="dialog" aria-modal="true" aria-labelledby="spellwar-title" onclick="closePopup(event, 'spellwar')">
         <div class="popup-content" onclick="event.stopPropagation()">
-            <h2 class="titreProj">SPELLWAR</h2>
-            <img src="fichiers/images/Spellwar.jpg" class="img" alt="Aperçu du projet Spellwar">
-            <a href="https://github.com/brs64/Spellwar" target="blank" class="download-btn" download><i class="fab fa-github"></i> Consulter</a>
+            <h2 class="titreProj" id="spellwar-title">SPELLWAR</h2>
+            <img src="fichiers/images/Spellwar.jpg" class="img" alt="Aperçu du projet Spellwar - Jeu d'arcade en C++" loading="lazy">
+            <a href="https://github.com/brs64/Spellwar" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet Spellwar sur GitHub"><i class="fab fa-github" aria-hidden="true"></i> Consulter</a>
             <p class="descrProj">
                 Spellwar est un jeu d’arcade au tour par tour dans lequel un joueur incarne un magicien qui affronte des créatures maléfiques. C'est un jeu prenant place dans le cmd, ce dernier a été imaginé pour nous initier de manière plus poussée au développement en C++.
             </p>
         </div>
     </div>
-    <div id="diaporama" class="popup" onclick="closePopup(event, 'diaporama')">
+    <div id="diaporama" class="popup" role="dialog" aria-modal="true" aria-labelledby="diaporama-title" onclick="closePopup(event, 'diaporama')">
         <div class="popup-content" onclick="event.stopPropagation()">
-            <h2 class="titreProj">LECTEUR DE DIAPORAMA</h2>
-            <img src="fichiers/images/Diaporama.jpg" class="img" alt="Aperçu du projet Diaporama">
-            <a href="https://github.com/brs64/S2.01" target="blank" class="download-btn">
-                <i class="fab fa-github"></i> Consulter
+            <h2 class="titreProj" id="diaporama-title">LECTEUR DE DIAPORAMA</h2>
+            <img src="fichiers/images/Diaporama.jpg" class="img" alt="Aperçu du projet Diaporama - Lecteur de diaporama en C++ avec MySQL" loading="lazy">
+            <a href="https://github.com/brs64/S2.01" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet Diaporama sur GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i> Consulter
             </a>
             <p class="descrProj">
                 C'est une application permettant d’afficher des images sous la forme d’un diaporama. Un diaporama étant défini comme un regroupement d’images possédant un titre. Plus tard nous avons mis à jour l'application pour qu'elle utilise des données externes provenant d'une base de donnée. Ce projet avait pour but de nous apprendre à lier le SQL à d'autres langages de programmation ainsi qu'au développement avancé en C++.
             </p>
         </div>
     </div>
-    <div id="vhs" class="popup" onclick="closePopup(event, 'vhs')">
+    <div id="vhs" class="popup" role="dialog" aria-modal="true" aria-labelledby="vhs-title" onclick="closePopup(event, 'vhs')">
         <div class="popup-content" onclick="event.stopPropagation()">
-            <h2 class="titreProj">Video Home Share</h2>
-            <img src="fichiers/images/VHS.png" class="img" alt="Aperçu du projet VHS">
-            <a href="https://github.com/jvlatrille/Video-Home-Share" target="blank" class="download-btn"><i class="fab fa-github"></i> Consulter</a>
+            <h2 class="titreProj" id="vhs-title">Video Home Share</h2>
+            <img src="fichiers/images/VHS.png" class="img" alt="Aperçu du projet Video Home Share - Application web PHP" loading="lazy">
+            <a href="https://github.com/jvlatrille/Video-Home-Share" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet Video Home Share sur GitHub"><i class="fab fa-github" aria-hidden="true"></i> Consulter</a>
             <p class="descrProj">
                 C'est une application web centrée sur le cinéma et les films, ce projet a pour but de nous apprendre la programmation en PHP et le développement d'une application web complexe mais aussi la création et l'implémentation d'une base de données dans un cadre concret.
             </p>
         </div>
     </div>
 
-    <section class="competences" id="competences">
+    <section class="competences" id="competences" aria-label="Section compétences">
         <h1>Mes Compétences</h1>
         <ul class="liste-competences">
             <li>
@@ -182,7 +226,7 @@
 
 
 
-    <section class="parcours" id="parcours">
+    <section class="parcours" id="parcours" aria-label="Section parcours scolaire">
         <div class="timeline-container">
             <h1>Mon Parcours Scolaire</h1>
             <div class="timeline">
@@ -215,13 +259,14 @@
         </div>
     </section>
 
-    <footer>
+    </main>
+    <footer role="contentinfo" aria-label="Informations de contact">
         <h3>Me contacter</h3>
         <div class="reseaux">
-            <a class="social-button phone" href="tel:+33663575119" target="_blank"><i class="fa fa-phone"></i></a>
-            <a class="social-button mail" href="mailto:arthur.baros64@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a class="social-button linkedin" href="https://www.linkedin.com/in/arthur-baros/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a class="social-button github" href="https://github.com/brs64" target="_blank"><i class="fab fa-github"></i></a>
+            <a class="social-button phone" href="tel:+33663575119" aria-label="Appeler au 06 63 57 51 19"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            <a class="social-button mail" href="mailto:arthur.baros64@gmail.com" aria-label="Envoyer un email à arthur.baros64@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+            <a class="social-button linkedin" href="https://www.linkedin.com/in/arthur-baros/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Arthur Baros"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a class="social-button github" href="https://github.com/brs64" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub d'Arthur Baros"><i class="fab fa-github" aria-hidden="true"></i></a>
         </div>
     </footer>
 
@@ -231,15 +276,49 @@
         AOS.init();
     </script>
     <script>
+    let currentOpenPopup = null;
+
     function openPopup(popupId) {
-        document.getElementById(popupId).style.display = 'flex';
+        const popup = document.getElementById(popupId);
+        popup.style.display = 'flex';
+        currentOpenPopup = popupId;
+
+        // Focus sur le premier élément focusable dans la popup
+        const firstFocusable = popup.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+        if (firstFocusable) {
+            setTimeout(() => firstFocusable.focus(), 100);
+        }
+
+        // Empêcher le scroll du body
+        document.body.style.overflow = 'hidden';
     }
 
     function closePopup(event, popupId) {
-        if (event.target.classList.contains('popup')) {
-            document.getElementById(popupId).style.display = 'none';
+        if (event && event.target.classList.contains('popup')) {
+            closePopupById(popupId);
         }
     }
+
+    function closePopupById(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+        currentOpenPopup = null;
+
+        // Restaurer le scroll du body
+        document.body.style.overflow = '';
+
+        // Remettre le focus sur le bouton qui a ouvert la popup
+        const projectButton = document.querySelector(`[onclick*="${popupId}"]`);
+        if (projectButton) {
+            projectButton.focus();
+        }
+    }
+
+    // Gestion de la touche Escape pour fermer les popups
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && currentOpenPopup) {
+            closePopupById(currentOpenPopup);
+        }
+    });
 </script>
 <script>
     const themeToggleButton = document.getElementById('checkbox');

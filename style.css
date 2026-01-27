@@ -25,6 +25,22 @@ html {
     box-sizing: border-box;
 }
 
+/* Amélioration de l'accessibilité - Focus visible */
+*:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Respect des préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
@@ -257,6 +273,14 @@ animation: ecriture 3s steps(77, end), clignotement 0.8s step-end infinite;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Amélioration de l'accessibilité pour les projets */
+.portfolio .project:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
+    transform: scale(1.02);
 }
 
 .portfolio .project img {
