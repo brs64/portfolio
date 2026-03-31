@@ -51,8 +51,8 @@
             "@type": "EducationalOrganization",
             "name": "BUT Informatique"
         },
-        "knowsAbout": ["PHP", "HTML", "CSS", "SQL", "C++", "JavaScript", "Python", "Java"],
-        "description": "Étudiant en deuxième année de BUT Informatique, parcours IAMSI. Passionné par les nouvelles technologies et le développement web."
+        "knowsAbout": ["PHP", "Laravel", "React", "Node.js", "HTML", "CSS", "SQL", "JavaScript", "Python", "Java", "Docker", "MongoDB"],
+        "description": "Étudiant en BUT Informatique, parcours IAMSI. Passionné par les nouvelles technologies, le développement web full-stack et la containerisation."
     }
     </script>
 </head>
@@ -89,12 +89,12 @@
         <article class="apropos">
             <h3>Salut ! Moi c'est Arthur,</h3>
             <p>
-                Je suis actuellement étudiant en deuxième année de <strong>BUT Informatique</strong>, parcours
+                Je suis étudiant en <strong>BUT Informatique</strong>, parcours
                 <strong>IAMSI (Infrastructures et Applications des Systèmes Informatiques)</strong>. Passionné par les
-                nouvelles technologies et l'innovation, je cherche un stage pour enrichir mes connaissances dans
-                l'univers de l'informatique et découvrir le monde professionnel. Au cours de mes études, j'ai eu
-                l'opportunité de travailler sur divers projets techniques, allant de la création d'applications web en
-                <strong>HTML, CSS, JavaScript</strong> à la gestion de bases de données avec <strong>MySQL</strong>.
+                nouvelles technologies et l'innovation, j'aime créer des solutions techniques innovantes et travailler sur des projets stimulants.
+                Au cours de mes études, j'ai eu l'opportunité de développer des compétences variées, allant du
+                <strong>développement web full-stack</strong> avec <strong>Laravel, React, Node.js</strong> à la
+                <strong>containerisation avec Docker</strong>, en passant par la gestion de bases de données <strong>SQL et NoSQL</strong>.
             </p>
             <div class="btn-box">
                 <a href="fichiers/BAROS Arthur CV.pdf" download="BAROS_Arthur_CV.pdf" target="_blank">Télécharger mon
@@ -106,60 +106,125 @@
 
     </section>
 
+    <section class="competences-scroll" aria-label="Compétences techniques">
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <div class="skill-item">Laravel</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">PHP</div>
+                <div class="skill-item">HTML/CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">MongoDB</div>
+                <div class="skill-item">Docker</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Java</div>
+                <div class="skill-item">C++</div>
+                <!-- Duplication pour l'effet infini -->
+                <div class="skill-item">Laravel</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">PHP</div>
+                <div class="skill-item">HTML/CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">MongoDB</div>
+                <div class="skill-item">Docker</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Java</div>
+                <div class="skill-item">C++</div>
+            </div>
+        </div>
+    </section>
+
     <section class="portfolio" id="portfolio" aria-label="Section projets">
         <article class="titreport">
             <h1 data-aos="zoom-out-right">Mes Projets</h1>
         </article>
         <div class="projects" role="list">
-            <div class="project" role="listitem" tabindex="0" data-aos="fade-right" data-aos-duration="1000" onclick="openPopup('cartomagic')" onkeypress="if(event.key==='Enter') openPopup('cartomagic')" aria-label="Projet Cartomagic - Cliquez pour plus de détails">
-                <img src="fichiers/images/Cartomagic.jpg" alt="Aperçu du projet Cartomagic - Jeu de cartes en C++" loading="lazy">
-                <div class="project-title">Cartomagic</div>
+            <div class="project" role="listitem" tabindex="0" data-aos="fade-up" data-aos-duration="800" onclick="openPopup('btsplay')" onkeypress="if(event.key==='Enter') openPopup('btsplay')" aria-label="Projet BTSPlay - Cliquez pour plus de détails">
+                <img src="fichiers/images/VHS.png" alt="Aperçu du projet BTSPlay - Media Asset Manager" loading="lazy">
+                <div class="project-content">
+                    <div class="project-title">BTSPlay - Media Asset Manager</div>
+                    <div class="project-description">Gestionnaire de médias pour le BTS Audiovisuel de Biarritz avec transcodage vidéo automatique.</div>
+                    <div class="project-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">FFmpeg</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
             </div>
-            <div class="project" role="listitem" tabindex="0" data-aos="fade-right" data-aos-duration="1500" onclick="openPopup('spellwar')" onkeypress="if(event.key==='Enter') openPopup('spellwar')" aria-label="Projet Spellwar - Cliquez pour plus de détails">
-                <img src="fichiers/images/Spellwar.jpg" alt="Aperçu du projet Spellwar - Jeu d'arcade en C++" loading="lazy">
-                <div class="project-title">Spellwar</div>
+            <div class="project" role="listitem" tabindex="0" data-aos="fade-up" data-aos-duration="1000" onclick="openPopup('partygames')" onkeypress="if(event.key==='Enter') openPopup('partygames')" aria-label="Projet Party Games - Cliquez pour plus de détails">
+                <img src="fichiers/images/Diaporama.jpg" alt="Aperçu du projet Party Games - Jeux multijoueurs" loading="lazy">
+                <div class="project-content">
+                    <div class="project-title">Party Games</div>
+                    <div class="project-description">Application web de jeux de soirée multijoueurs avec interaction en temps réel via WebSocket.</div>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">WebSocket</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                </div>
             </div>
-            <div class="project" role="listitem" tabindex="0" data-aos="fade-right" data-aos-duration="2000" onclick="openPopup('diaporama')" onkeypress="if(event.key==='Enter') openPopup('diaporama')" aria-label="Projet Diaporama - Cliquez pour plus de détails">
-                <img src="fichiers/images/Diaporama.jpg" alt="Aperçu du projet Diaporama - Lecteur de diaporama en C++ avec MySQL" loading="lazy">
-                <div class="project-title">Diaporama</div>
+            <div class="project" role="listitem" tabindex="0" data-aos="fade-up" data-aos-duration="1200" onclick="openPopup('batcher')" onkeypress="if(event.key==='Enter') openPopup('batcher')" aria-label="Projet Batcher Docker - Cliquez pour plus de détails">
+                <img src="fichiers/images/Diaporama.jpg" alt="Aperçu du projet Batcher Docker - Infrastructure stage" loading="lazy">
+                <div class="project-content">
+                    <div class="project-title">Batcher Docker</div>
+                    <div class="project-description">Infrastructure complète dockerisée pour la gestion de batch et de processus asynchrones.</div>
+                    <div class="project-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                </div>
             </div>
-            <div class="project" role="listitem" tabindex="0" data-aos="fade-right" data-aos-duration="2500" onclick="openPopup('vhs')" onkeypress="if(event.key==='Enter') openPopup('vhs')" aria-label="Projet Video Home Share - Cliquez pour plus de détails">
+            <div class="project" role="listitem" tabindex="0" data-aos="fade-up" data-aos-duration="1400" onclick="openPopup('vhs')" onkeypress="if(event.key==='Enter') openPopup('vhs')" aria-label="Projet Video Home Share - Cliquez pour plus de détails">
                 <img src="fichiers/images/VHS.png" alt="Aperçu du projet Video Home Share - Application web PHP" loading="lazy">
-                <div class="project-title">V. H. S.</div>
+                <div class="project-content">
+                    <div class="project-title">Video Home Share</div>
+                    <div class="project-description">Application web centrée sur le cinéma avec gestion de films et base de données complexe.</div>
+                    <div class="project-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Popups -->
-    <div id="cartomagic" class="popup" role="dialog" aria-modal="true" aria-labelledby="cartomagic-title" onclick="closePopup(event, 'cartomagic')">
+    <div id="btsplay" class="popup" role="dialog" aria-modal="true" aria-labelledby="btsplay-title" onclick="closePopup(event, 'btsplay')">
         <div class="popup-content" onclick="event.stopPropagation()">
-            <h2 class="titreProj" id="cartomagic-title">CARTOMAGIC</h2>
-            <img src="fichiers/images/Cartomagic.jpg" class="img" alt="Aperçu du projet Cartomagic - Jeu de cartes en C++" loading="lazy">
-            <a href="https://github.com/brs64/Cartomagic" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet Cartomagic sur GitHub"><i class="fab fa-github" aria-hidden="true"></i> Consulter</a>
+            <h2 class="titreProj" id="btsplay-title">BTSPlay - Media Asset Manager</h2>
+            <img src="fichiers/images/VHS.png" class="img" alt="Aperçu du projet BTSPlay" loading="lazy">
+            <a href="https://github.com/brs64/Media-Asset-Manager" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet BTSPlay sur GitHub"><i class="fab fa-github" aria-hidden="true"></i> Consulter</a>
             <p class="descrProj">
-                Un jeu de cartes en C++ initiant au développement en ligne de commande.
+                BTSPlay est un Media Asset Manager développé pour le BTS Audiovisuel de Biarritz. L'application permet de gérer, indexer et visualiser des vidéos stockées sur des serveurs NAS. Elle propose également le transcodage automatique entre formats MXF et MP4 via FFAStrans, un système d'authentification, et un panneau d'administration pour les professeurs. Développé en Laravel avec Docker, MySQL et FFmpeg.
             </p>
         </div>
     </div>
-    <div id="spellwar" class="popup" role="dialog" aria-modal="true" aria-labelledby="spellwar-title" onclick="closePopup(event, 'spellwar')">
+    <div id="partygames" class="popup" role="dialog" aria-modal="true" aria-labelledby="partygames-title" onclick="closePopup(event, 'partygames')">
         <div class="popup-content" onclick="event.stopPropagation()">
-            <h2 class="titreProj" id="spellwar-title">SPELLWAR</h2>
-            <img src="fichiers/images/Spellwar.jpg" class="img" alt="Aperçu du projet Spellwar - Jeu d'arcade en C++" loading="lazy">
-            <a href="https://github.com/brs64/Spellwar" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet Spellwar sur GitHub"><i class="fab fa-github" aria-hidden="true"></i> Consulter</a>
+            <h2 class="titreProj" id="partygames-title">Party Games</h2>
+            <img src="fichiers/images/Diaporama.jpg" class="img" alt="Aperçu du projet Party Games" loading="lazy">
+            <a href="https://github.com/brs64" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet Party Games sur GitHub"><i class="fab fa-github" aria-hidden="true"></i> Consulter</a>
             <p class="descrProj">
-                Spellwar est un jeu d’arcade au tour par tour dans lequel un joueur incarne un magicien qui affronte des créatures maléfiques. C'est un jeu prenant place dans le cmd, ce dernier a été imaginé pour nous initier de manière plus poussée au développement en C++.
+                Application web de jeux de soirée multijoueurs utilisant WebSocket pour une interaction en temps réel. L'ordinateur sert d'écran principal et les participants jouent avec leur smartphone. Inclut plusieurs jeux : "Qui serait le plus susceptible ?", générateur de fake news, jump coopératif, et capture de souvenirs de soirée. Stack technique : React, Node.js, Express, Socket.io, PostgreSQL et Redis, le tout dockerisé.
             </p>
         </div>
     </div>
-    <div id="diaporama" class="popup" role="dialog" aria-modal="true" aria-labelledby="diaporama-title" onclick="closePopup(event, 'diaporama')">
+    <div id="batcher" class="popup" role="dialog" aria-modal="true" aria-labelledby="batcher-title" onclick="closePopup(event, 'batcher')">
         <div class="popup-content" onclick="event.stopPropagation()">
-            <h2 class="titreProj" id="diaporama-title">LECTEUR DE DIAPORAMA</h2>
-            <img src="fichiers/images/Diaporama.jpg" class="img" alt="Aperçu du projet Diaporama - Lecteur de diaporama en C++ avec MySQL" loading="lazy">
-            <a href="https://github.com/brs64/S2.01" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet Diaporama sur GitHub">
-                <i class="fab fa-github" aria-hidden="true"></i> Consulter
-            </a>
+            <h2 class="titreProj" id="batcher-title">Batcher Docker</h2>
+            <img src="fichiers/images/Diaporama.jpg" class="img" alt="Aperçu du projet Batcher Docker" loading="lazy">
+            <a href="https://github.com/brs64" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet Batcher sur GitHub"><i class="fab fa-github" aria-hidden="true"></i> Consulter</a>
             <p class="descrProj">
-                C'est une application permettant d’afficher des images sous la forme d’un diaporama. Un diaporama étant défini comme un regroupement d’images possédant un titre. Plus tard nous avons mis à jour l'application pour qu'elle utilise des données externes provenant d'une base de donnée. Ce projet avait pour but de nous apprendre à lier le SQL à d'autres langages de programmation ainsi qu'au développement avancé en C++.
+                Infrastructure complète développée lors de mon stage, utilisant Docker pour orchestrer plusieurs services. Le projet comprend Laravel pour le backend web, Node.js pour les services asynchrones, MongoDB pour le stockage de données non-relationnelles, et MySQL/MariaDB pour les données relationnelles. Architecture microservices avec PhpMyAdmin et Portkey pour l'administration.
             </p>
         </div>
     </div>
@@ -169,62 +234,10 @@
             <img src="fichiers/images/VHS.png" class="img" alt="Aperçu du projet Video Home Share - Application web PHP" loading="lazy">
             <a href="https://github.com/jvlatrille/Video-Home-Share" target="_blank" rel="noopener noreferrer" class="download-btn" aria-label="Consulter le projet Video Home Share sur GitHub"><i class="fab fa-github" aria-hidden="true"></i> Consulter</a>
             <p class="descrProj">
-                C'est une application web centrée sur le cinéma et les films, ce projet a pour but de nous apprendre la programmation en PHP et le développement d'une application web complexe mais aussi la création et l'implémentation d'une base de données dans un cadre concret.
+                Application web centrée sur le cinéma et les films. Ce projet a pour but de nous apprendre la programmation en PHP et le développement d'une application web complexe, ainsi que la création et l'implémentation d'une base de données dans un cadre concret. Gestion complète de catalogues de films avec système d'authentification et d'administration.
             </p>
         </div>
     </div>
-
-    <section class="competences" id="competences" aria-label="Section compétences">
-        <h1>Mes Compétences</h1>
-        <ul class="liste-competences">
-            <li>
-                <span>PHP</span>
-                <div class="barre-competence">
-                    <div class="progression" style="width: 95%;"></div>
-                </div>
-            </li>
-            <li>
-                <span>HTML/CSS</span>
-                <div class="barre-competence">
-                    <div class="progression" style="width: 92%;"></div>
-                </div>
-            </li>
-            <li>
-                <span>SQL</span>
-                <div class="barre-competence">
-                    <div class="progression" style="width: 90%;"></div>
-                </div>
-            </li>
-            <li>
-                <span>C++</span>
-                <div class="barre-competence">
-                    <div class="progression" style="width: 80%;"></div>
-                </div>
-            </li>
-            <li>
-                <span>JavaScript</span>
-                <div class="barre-competence">
-                    <div class="progression" style="width: 75%;"></div>
-                </div>
-            </li>
-            <li>
-                <span>Python</span>
-                <div class="barre-competence">
-                    <div class="progression" style="width: 72%;"></div>
-                </div>
-            </li>
-            <li>
-                <span>Java</span>
-                <div class="barre-competence">
-                    <div class="progression" style="width: 70%;"></div>
-                </div>
-            </li>
-
-
-        </ul>
-    </section>
-
-
 
     <section class="parcours" id="parcours" aria-label="Section parcours scolaire">
         <div class="timeline-container">
@@ -233,9 +246,9 @@
                 <div class="timeline-item top ">
                     <div class="timeline-content">
                         <h3>Université</h3>
-                        <p>Actuellement étudiant en <strong>BUT Informatique</strong>, je développe et perfectionne mes
-                            compétences en programmation,
-                            développement web, gestion de bases de données et beaucoup d'autres choses !</p>
+                        <p>Étudiant en <strong>BUT Informatique</strong>, je développe et perfectionne mes
+                            compétences en développement web full-stack, containerisation avec Docker,
+                            gestion de bases de données SQL/NoSQL et architectures microservices.</p>
 
                     </div>
                 </div>

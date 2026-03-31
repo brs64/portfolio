@@ -249,67 +249,99 @@ animation: ecriture 3s steps(77, end), clignotement 0.8s step-end infinite;
 
 /* Portfolio */
 .portfolio {
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
-    padding: 20px;
+    padding: 80px 20px 50px;
 }
 
 .portfolio .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .portfolio .project {
     position: relative;
-    width: 300px;
-    height: 200px;
-    margin: 20px;
+    background: var(--background-color);
+    border-radius: 16px;
     overflow: hidden;
-    border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+.portfolio .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(195, 89, 221, 0.3);
+    border-color: var(--primary-color);
 }
 
 /* Amélioration de l'accessibilité pour les projets */
 .portfolio .project:focus {
     outline: 3px solid var(--primary-color);
     outline-offset: 4px;
-    transform: scale(1.02);
+    transform: translateY(-10px);
 }
 
 .portfolio .project img {
     width: 100%;
-    height: 100%;
+    height: 220px;
     object-fit: cover;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .portfolio .project:hover img {
-    transform: scale(1.1);
-    opacity: 0.2;
+    transform: scale(1.05);
+}
+
+.portfolio .project .project-content {
+    padding: 20px;
+    text-align: left;
 }
 
 .portfolio .project .project-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    padding: 10px;
-    color: var(--secondary-color);
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    position: relative;
 }
 
-.portfolio .project:hover .project-title {
-    opacity: 1;
+.portfolio .project .project-description {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.portfolio .project .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.portfolio .project .tag {
+    padding: 5px 12px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.portfolio .project:hover .tag {
+    transform: scale(1.05);
 }
 
 h1 {
@@ -428,19 +460,27 @@ h1 {
         margin-left: 3vw;
         font-size: 90%;
     }
-    .portfolio .projects {
-        flex-direction: column;
-        align-items: center;
+
+    .portfolio {
+        padding: 60px 15px 40px;
     }
 
-    .portfolio .project {
-        width: 90%;
-        max-width: none;
-        height: auto;
+    .portfolio .projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .portfolio .project img {
-        height: auto;
+        height: 180px;
+    }
+
+    .competences-scroll {
+        padding: 40px 0;
+    }
+
+    .skill-item {
+        padding: 15px 30px;
+        font-size: 1rem;
     }
 
     .btn a {
@@ -463,7 +503,7 @@ h1 {
         max-width: 100vh;
         font-size: 100%;
     }
-    
+
 }
 
 @media (max-width: 480px) {
@@ -481,29 +521,52 @@ h1 {
     }
 
     .portfolio{
-        margin-top: 20vh;
+        padding: 40px 10px 30px;
     }
 
-    .portfolio .project {
-        margin: 10px 0;
+    .portfolio .projects {
+        gap: 15px;
+    }
+
+    .portfolio .project img {
+        height: 160px;
+    }
+
+    .portfolio .project .project-content {
+        padding: 15px;
+    }
+
+    .portfolio .project .project-title {
+        font-size: 1.2rem;
+    }
+
+    .portfolio .project .project-description {
+        font-size: 0.85rem;
+    }
+
+    .competences-scroll {
+        padding: 30px 0;
+    }
+
+    .scroll-content {
+        gap: 20px;
+    }
+
+    .skill-item {
+        padding: 12px 25px;
+        font-size: 0.9rem;
     }
 
     .accueil-content h1 {
         font-size: 24px;
     }
 
-
-    
-    .competences {
-        margin-top: 20vh;
-    }
-
     .parcours {
-        margin-top: 20vh;
+        padding: 40px 10px;
     }
 
     footer {
-        margin-top: 25vh;
+        margin-top: 40px;
     }
 }
 
@@ -526,43 +589,90 @@ h1 {
     }
 }
 
-.competences {
-    padding: 100px 10%;
+/* Barre de défilement infini des compétences */
+.competences-scroll {
     background-color: var(--background-color);
-    text-align: center;
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
 }
 
-
-.liste-competences {
-    list-style: none;
-    padding: 0;
+.competences-scroll::before,
+.competences-scroll::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
 }
 
-.liste-competences li {
-    margin-bottom: 20px;
-    text-align: left;
+.competences-scroll::before {
+    left: 0;
+    background: linear-gradient(to right, var(--background-color), transparent);
 }
 
-.liste-competences li span {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    display: inline-block;
-    margin-bottom: 5px;
+.competences-scroll::after {
+    right: 0;
+    background: linear-gradient(to left, var(--background-color), transparent);
 }
 
-.barre-competence {
-    background-color: #444;
-    border-radius: 10px;
-    height: 20px;
+.scroll-container {
     width: 100%;
     overflow: hidden;
 }
 
-.progression {
-    background-color: var(--primary-color);
+.scroll-content {
+    display: flex;
+    gap: 30px;
+    animation: scroll-infinite 30s linear infinite;
+    width: fit-content;
+}
+
+.scroll-content:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.skill-item {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
     height: 100%;
-    border-radius: 10px;
-    transition: width 0.5s ease-in-out;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.skill-item:hover::before {
+    left: 100%;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px) scale(1.05);
 }
 
 /* Parcours */
